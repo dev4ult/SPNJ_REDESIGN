@@ -9,11 +9,11 @@
 }
 
 html {
-  --hero-title-background: #7fffd6;
-  --hero-title-background-before: #95efce;
-
   --background-color: #effffd;
   --background-color-accent: #b8fff9;
+
+  --hero-title-background: #7fffd6;
+  --hero-title-background-before: #95efce;
 
   --title-color: #3e467f;
   --title-background: #1ee3cf;
@@ -25,6 +25,10 @@ html {
   --link-color: #effffd;
   --link-background: #2ea1d9;
   --link-background-before: #42c2ff;
+
+  --card-background: #2999b0;
+  --card-title-background: #12efd9;
+  --card-shadow: #12efd9;
 }
 
 body {
@@ -247,12 +251,13 @@ h3 {
 
     .team-card {
       position: relative;
-      background-color: var(--title-background-before);
+      background-color: var(--card-background);
       padding: 0.5em 0.7em 3em;
       width: 90%;
       height: 330px;
       margin-inline: auto;
-      border-radius: 8px 50px 8px 8px;
+      border-radius: 10px 50px 0 10px;
+      box-shadow: -10px 10px var(--card-shadow);
 
       .profile-img,
       .profile-description,
@@ -262,7 +267,7 @@ h3 {
 
       .name-card {
         position: absolute;
-        background-color: var(--title-background);
+        background-color: var(--card-title-background);
         text-align: center;
         padding: 0.3em 0.2em;
         font-size: 1.4rem;
