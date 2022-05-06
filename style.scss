@@ -218,6 +218,10 @@ h3 {
 
   .about-container {
     align-self: center;
+
+    .section-description {
+      line-height: 1.5;
+    }
   }
 }
 
@@ -244,10 +248,10 @@ h3 {
       width: 90%;
       height: 300px;
       margin-inline: auto;
-      border-radius: 0 50px 0 0;
+      border-radius: 8px 50px 8px 8px;
 
       .profile-img,
-      .profile-desc,
+      .profile-description,
       .name-card {
         position: absolute;
       }
@@ -257,29 +261,45 @@ h3 {
         background-color: var(--title-background-before);
         text-align: center;
         padding-block: 0.2em;
+        font-size: 1.3rem;
         right: -10px;
         left: -10px;
         bottom: 10px;
         color: var(--link-color);
-        border-radius: 10px;
+        font-weight: 600;
         z-index: 1;
+        border-radius: 8px;
       }
 
-      .profile-desc {
+      .profile-description {
         z-index: 1;
-        bottom: 50px;
-        left: 10px;
+        top: 10px;
+        left: 20px;
+        color: var(--link-color);
+
+        .person-name {
+          background-color: rgba(0, 0, 0, 0.3);
+          padding: 0.3em 0.7em;
+          border-radius: 20px;
+          margin-bottom: 0.2em;
+        }
+
+        .detail-button {
+          color: var(--link-color);
+          padding-inline: 0.7em;
+          text-decoration: none;
+        }
       }
 
       .profile-img {
         top: 0;
-        left: 0;
         right: 0;
         bottom: 0;
-        width: 100%;
+        width: 95%;
         height: 100%;
         object-fit: cover;
         border-radius: 0 50px 0 0;
+        filter: brightness(0.65);
       }
     }
   }
