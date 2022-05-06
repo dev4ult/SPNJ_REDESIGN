@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+*,
+*::before,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  --hero-title-background: #7fffd6;
+  --hero-title-background-before: #95efce;
+  --background-color: #effffd;
+  --background-color-accent: #b8fff9;
+  --title-color: #3e467f;
+  --title-background: #1ee3cf;
+  --title-background-before: #1f8ea3;
+  --section-desc-color: #395ea6;
+  --section-shadow: #d2e4e1;
+  --link-color: #effffd;
+  --link-background: #2ea1d9;
+  --link-background-before: #42c2ff;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--background-color);
+}
+
+header,
+section,
+footer {
+  height: 100vh;
+}
+
+.container {
+  width: 90%;
+  margin-inline: auto;
+  position: relative;
+}
+
+.section-title {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1.5rem;
+  padding: 0.1em 0.3em;
+  color: var(--title-color);
+  background-color: var(--title-background);
+  position: relative;
+}
+
+.section-title:before {
+  position: absolute;
+  content: '';
+  top: 4px;
+  bottom: -4px;
+  right: -4px;
+  left: 4px;
+  background-color: var(--title-background-before);
+  z-index: -1;
+}
+
+.section-description {
+  margin-top: 1em;
+  font-style: italic;
+  color: var(--section-desc-color);
+  font-weight: 600;
+}
+
+/* ======================
+   == HELVETICA FAMILY ==
+   ====================== */
+h1,
+h2,
+h3 {
+  font-family: 'HELVETICA';
+  text-transform: uppercase;
+}
+
+/* ================
+   == NAVIGATION ==
+   ================ */
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  padding: 0.3em 0.7em;
+  border-radius: 100px;
+  background-color: var(--background-color);
+  z-index: 2;
+  opacity: 0.8;
+}
+
+.nav .nav-list {
+  display: none;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+}
+
+.nav .nav-list .nav-item {
+  margin-inline: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  background-color: var(--link-background);
+  padding: 0.3em 0.5em;
+  border-radius: 50px;
+}
+
+.nav .nav-list .nav-item .nav-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: bold;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: var(--link-color);
+}
+
+.nav .nav-theme,
+.nav .nav-toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+}
+
+.nav .nav-theme {
+  margin-left: 0.5em;
+}
+
+.nav:hover {
+  opacity: 1;
+}
+
+/* ==================
+   == HERO SECTION ==
+   ================== */
+.hero-section {
+  background-color: var(--background-color-accent);
+  text-align: center;
+  position: relative;
+  z-index: -2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 60vh;
+  -webkit-box-shadow: 0 5px 10px var(--section-shadow);
+          box-shadow: 0 5px 10px var(--section-shadow);
+}
+
+.hero-section .hero-container {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.hero-section .hero-container .hero-title {
+  color: var(--title-color);
+  font-size: 2.5rem;
+  margin-inline: auto;
+}
+
+.hero-section .hero-container .hero-title .sahabat,
+.hero-section .hero-container .hero-title .pnj {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-inline: auto;
+  background-color: var(--hero-title-background);
+  padding-inline: 0.2em;
+  position: relative;
+}
+
+.hero-section .hero-container .hero-title .pnj {
+  color: var(--link-background-before);
+  margin-top: 0.15em;
+}
+
+.hero-section .hero-container .hero-title .sahabat::before,
+.hero-section .hero-container .hero-title .pnj::before {
+  position: absolute;
+  content: '';
+  top: 5px;
+  bottom: -5px;
+  right: -5px;
+  left: 5px;
+  background-color: var(--hero-title-background-before);
+  z-index: -1;
+}
+
+.hero-section .hero-container .motto {
+  margin-top: 1em;
+  font-weight: 600;
+  color: var(--title-color);
+  width: 60%;
+  margin: 1.2em auto 0;
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+/* ===================
+   == ABOUT SECTION ==
+   =================== */
+.about-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30vh;
+}
+
+.about-section .about-container {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+/*# sourceMappingURL=style.css.map */
