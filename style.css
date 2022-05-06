@@ -17,7 +17,7 @@ html {
   --title-background: #1ee3cf;
   --title-background-before: #1f8ea3;
   --section-desc-color: #395ea6;
-  --section-shadow: #d2e4e1;
+  --section-shadow: #d1ebe7;
   --link-color: #effffd;
   --link-background: #2ea1d9;
   --link-background-before: #42c2ff;
@@ -32,6 +32,10 @@ header,
 section,
 footer {
   height: 100vh;
+}
+
+img {
+  max-width: 100%;
 }
 
 .container {
@@ -49,6 +53,7 @@ footer {
   color: var(--title-color);
   background-color: var(--title-background);
   position: relative;
+  border-radius: 5px;
 }
 
 .section-title:before {
@@ -60,11 +65,11 @@ footer {
   left: 4px;
   background-color: var(--title-background-before);
   z-index: -1;
+  border-radius: 5px;
 }
 
 .section-description {
   margin-top: 1em;
-  font-style: italic;
   color: var(--section-desc-color);
   font-weight: 600;
 }
@@ -158,8 +163,9 @@ h3 {
   display: -ms-flexbox;
   display: flex;
   height: 60vh;
-  -webkit-box-shadow: 0 5px 10px var(--section-shadow);
-          box-shadow: 0 5px 10px var(--section-shadow);
+  -webkit-box-shadow: 0 3px 10px var(--section-shadow);
+          box-shadow: 0 3px 10px var(--section-shadow);
+  border-radius: 0 0 0 60px;
 }
 
 .hero-section .hero-container {
@@ -184,6 +190,7 @@ h3 {
   background-color: var(--hero-title-background);
   padding-inline: 0.2em;
   position: relative;
+  border-radius: 7px;
 }
 
 .hero-section .hero-container .hero-title .pnj {
@@ -199,6 +206,7 @@ h3 {
   bottom: -5px;
   right: -5px;
   left: 5px;
+  border-radius: 7px;
   background-color: var(--hero-title-background-before);
   z-index: -1;
 }
@@ -221,12 +229,79 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 30vh;
+  height: 33vh;
 }
 
 .about-section .about-container {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+/* ==================
+   == TEAM SECTION ==
+   ================== */
+.team-section {
+  background-color: var(--background-color-accent);
+  height: auto;
+  -webkit-box-shadow: 0 -3px 10px var(--section-shadow);
+          box-shadow: 0 -3px 10px var(--section-shadow);
+  padding-block: 3em;
+  border-radius: 0 60px 0 0;
+}
+
+.team-section .team-slide .team-card + .team-card {
+  margin-top: 3em;
+}
+
+.team-section .team-slide .team-card {
+  position: relative;
+  background-color: var(--title-background);
+  padding: 0.5em 0.7em 3em;
+  width: 90%;
+  height: 300px;
+  margin-inline: auto;
+  border-radius: 0 50px 0 0;
+}
+
+.team-section .team-slide .team-card .profile-img,
+.team-section .team-slide .team-card .profile-desc,
+.team-section .team-slide .team-card .name-card {
+  position: absolute;
+}
+
+.team-section .team-slide .team-card .name-card {
+  position: absolute;
+  background-color: var(--title-background-before);
+  text-align: center;
+  padding-block: 0.2em;
+  right: -10px;
+  left: -10px;
+  bottom: 10px;
+  color: var(--link-color);
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.team-section .team-slide .team-card .profile-desc {
+  z-index: 1;
+  bottom: 50px;
+  left: 10px;
+}
+
+.team-section .team-slide .team-card .profile-img {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0 50px 0 0;
+}
+
+.team-section .team-slide + .team-slide {
+  margin-top: 10em;
 }
 /*# sourceMappingURL=style.css.map */
