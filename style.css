@@ -254,17 +254,13 @@ h3 {
   border-radius: 0 60px 0 0;
 }
 
-.team-section .team-slide .team-card + .team-card {
-  margin-top: 3em;
-}
-
 .team-section .team-slide .team-card {
   position: relative;
   background-color: var(--title-background-before);
   padding: 0.5em 0.7em 3em;
   width: 90%;
   height: 330px;
-  margin-inline: auto;
+  margin: 0 auto 3em;
   border-radius: 8px 50px 8px 8px;
 }
 
@@ -320,9 +316,5 @@ h3 {
   border-radius: 0 50px 0 0;
   -webkit-filter: brightness(0.65);
           filter: brightness(0.65);
-}
-
-.team-section .team-slide + .team-slide {
-  margin-top: 10em;
 }
 /*# sourceMappingURL=style.css.map */
