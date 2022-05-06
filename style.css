@@ -95,7 +95,7 @@ h3 {
       -ms-flex-align: center;
           align-items: center;
   position: fixed;
-  right: 10px;
+  right: 2vw;
   top: 10px;
   padding: 0.3em 0.7em;
   border-radius: 100px;
@@ -260,10 +260,10 @@ h3 {
 
 .team-section .team-slide .team-card {
   position: relative;
-  background-color: var(--title-background);
+  background-color: var(--title-background-before);
   padding: 0.5em 0.7em 3em;
   width: 90%;
-  height: 300px;
+  height: 330px;
   margin-inline: auto;
   border-radius: 8px 50px 8px 8px;
 }
@@ -276,17 +276,17 @@ h3 {
 
 .team-section .team-slide .team-card .name-card {
   position: absolute;
-  background-color: var(--title-background-before);
+  background-color: var(--title-background);
   text-align: center;
-  padding-block: 0.2em;
-  font-size: 1.3rem;
-  right: -10px;
-  left: -10px;
+  padding: 0.3em 0.2em;
+  font-size: 1.4rem;
+  right: 0;
+  left: 20px;
   bottom: 10px;
-  color: var(--link-color);
+  color: var(--title-color);
   font-weight: 600;
   z-index: 1;
-  border-radius: 8px;
+  border-radius: 8px 0 0 8px;
 }
 
 .team-section .team-slide .team-card .profile-description {
