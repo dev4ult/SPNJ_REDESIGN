@@ -67,8 +67,8 @@ img {
   content: '';
   top: 4px;
   bottom: -4px;
-  right: -4px;
-  left: 4px;
+  right: 4px;
+  left: -4px;
   background-color: var(--title-background-before);
   z-index: -1;
   border-radius: 5px;
@@ -157,8 +157,6 @@ h3 {
   z-index: -2;
   display: flex;
   height: 60vh;
-  box-shadow: 0 3px 10px var(--section-shadow);
-  border-radius: 0 0 0 60px;
 
   .hero-container {
     align-self: center;
@@ -190,8 +188,8 @@ h3 {
         content: '';
         top: 5px;
         bottom: -5px;
-        right: -5px;
-        left: 5px;
+        right: 5px;
+        left: -5px;
         border-radius: 7px;
 
         background-color: var(--hero-title-background-before);
@@ -219,13 +217,18 @@ h3 {
 .about-section {
   display: flex;
   height: 33vh;
-
   .about-container {
     align-self: center;
 
     .section-description {
       line-height: 1.5;
     }
+  }
+}
+
+@media (max-width: 320px) {
+  .about-section {
+    height: calc(100vh - 130vw);
   }
 }
 
@@ -236,28 +239,45 @@ h3 {
 .team-section {
   background-color: var(--background-color-accent);
   height: auto;
-  box-shadow: 0 -3px 10px var(--section-shadow);
   padding-block: 3em;
-  border-radius: 0 60px 0 0;
+
+  .team-container {
+    display: flex;
+    overflow-x: scroll;
+    width: 98%;
+  }
 
   .team-slide + .team-slide {
-    margin-top: 3em;
+    margin-left: 2em;
+  }
+
+  .team-slide:first-child {
+    .team-card:first-child {
+      margin-left: 1em;
+    }
+  }
+
+  .team-slide:last-child {
+    .team-card:last-child {
+      margin-right: 1em;
+    }
   }
 
   .team-slide {
+    display: flex;
+
     .team-card + .team-card {
-      margin-top: 3em;
+      margin-left: 2em;
     }
 
     .team-card {
       position: relative;
       background-color: var(--card-background);
       padding: 0.5em 0.7em 3em;
-      width: 90%;
-      height: 330px;
+      width: 80vw;
+      height: 300px;
       margin-inline: auto;
-      border-radius: 10px 50px 0 10px;
-      box-shadow: -10px 10px var(--card-shadow);
+      border-radius: 10px;
 
       .profile-img,
       .profile-description,
@@ -271,10 +291,10 @@ h3 {
         text-align: center;
         padding: 0.3em 0.2em;
         font-size: 1.4rem;
-        right: 10px;
+        right: 0;
         left: 0;
         bottom: 10px;
-        color: var(--title-color);
+        color: var(--section-desc-color);
         font-weight: 600;
         z-index: 1;
       }
@@ -306,8 +326,44 @@ h3 {
         width: 95%;
         height: 100%;
         object-fit: cover;
-        border-radius: 0 50px 0 0;
+        border-radius: 0 10px 10px 0;
         filter: brightness(0.7);
+      }
+    }
+  }
+}
+
+/* ======================
+   == DIVISION SECTION ==
+   ====================== */
+
+.division-section {
+  height: auto;
+
+  .division-container {
+    display: flex;
+    overflow: auto;
+    white-space: nowrap;
+    width: 95%;
+    padding-block: 3em;
+
+    .division-slide {
+      width: 95vw;
+      padding-inline: 1em;
+
+      .slide-content + .slide-content {
+        margin-top: 3em;
+      }
+
+      .slide-content {
+        .section-paragraph,
+        .short-review {
+          white-space: normal;
+
+          font-size: 1rem;
+          color: var(--section-desc-color);
+          margin-block: 1em;
+        }
       }
     }
   }
