@@ -420,13 +420,13 @@ h3 {
   width: 98%;
   padding-block: 3em;
   position: absolute;
-  -webkit-transition: 300ms ease;
-  transition: 300ms ease;
 }
 
 .division-section .division-container .division-slide {
   width: 98vw;
   position: relative;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
 }
 
 .division-section .division-container .division-slide .slide-content + .slide-content {

@@ -387,11 +387,11 @@ h3 {
     width: 98%;
     padding-block: 3em;
     position: absolute;
-    transition: 300ms ease;
 
     .division-slide {
       width: 98vw;
       position: relative;
+      transition: 300ms ease;
 
       .slide-content + .slide-content {
         margin-top: 3em;
