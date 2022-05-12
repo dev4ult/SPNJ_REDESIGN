@@ -244,7 +244,7 @@ h3 {
 
 @media (max-width: 320px) {
   .about-section {
-    height: calc(100vh - 130vw);
+    height: calc(90vh - 110vw);
   }
 }
 
@@ -253,16 +253,26 @@ h3 {
    ================== */
 .team-section {
   background-color: var(--background-color-accent);
-  height: auto;
-  padding-block: 3em;
+  height: 120vw;
+  max-height: 576px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 1em;
 }
 
 .team-section .team-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
   overflow-x: scroll;
+  padding-bottom: 1em;
   width: 98%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .team-section .team-slide + .team-slide {
@@ -270,11 +280,11 @@ h3 {
 }
 
 .team-section .team-slide:first-child .team-card:first-child {
-  margin-left: 1em;
+  margin-left: 5vw;
 }
 
 .team-section .team-slide:last-child .team-card:last-child {
-  margin-right: 1em;
+  margin-right: 5vw;
 }
 
 .team-section .team-slide {
@@ -284,7 +294,7 @@ h3 {
 }
 
 .team-section .team-slide .team-card + .team-card {
-  margin-left: 2em;
+  margin-left: 7vw;
 }
 
 .team-section .team-slide .team-card {
@@ -292,7 +302,9 @@ h3 {
   background-color: var(--card-background);
   padding: 0.5em 0.7em 3em;
   width: 80vw;
-  height: 300px;
+  height: 100vw;
+  max-width: 378px;
+  max-height: 473px;
   margin-inline: auto;
   border-radius: 10px;
 }
@@ -322,6 +334,7 @@ h3 {
   top: 10px;
   left: 20px;
   color: var(--link-color);
+  font-size: 4vw;
 }
 
 .team-section .team-slide .team-card .profile-description .person-name {
