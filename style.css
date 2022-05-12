@@ -270,9 +270,6 @@ h3 {
   overflow-x: scroll;
   padding-bottom: 1em;
   width: 98%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
 }
 
 .team-section .team-slide + .team-slide {
@@ -367,31 +364,82 @@ h3 {
    == DIVISION SECTION ==
    ====================== */
 .division-section {
+  height: calc(98vh * 3);
+}
+
+.division-section .division-selection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0.5em 0 0 1em;
+  background-color: var(--link-background);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 50px;
+  padding-inline: 0.5em;
+}
+
+.division-section .division-selection .back {
+  display: none;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
   height: auto;
+}
+
+.division-section .division-selection .option-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.division-section .division-selection .option-container .option {
+  list-style: none;
+  padding: 0.3em;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--link-color);
+}
+
+.division-section .division-selection .option-container .option + .option {
+  display: none;
 }
 
 .division-section .division-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow: auto;
-  white-space: nowrap;
-  width: 95%;
+  overflow-x: scroll;
+  width: 98%;
   padding-block: 3em;
+  position: absolute;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
 }
 
 .division-section .division-container .division-slide {
-  width: 95vw;
-  padding-inline: 1em;
+  width: 98vw;
+  position: relative;
 }
 
 .division-section .division-container .division-slide .slide-content + .slide-content {
   margin-top: 3em;
 }
 
+.division-section .division-container .division-slide .slide-content {
+  width: 98vw;
+  margin-left: 1em;
+}
+
 .division-section .division-container .division-slide .slide-content .section-paragraph,
 .division-section .division-container .division-slide .slide-content .short-review {
-  white-space: normal;
   font-size: 1rem;
   color: var(--section-desc-color);
   margin-block: 1em;

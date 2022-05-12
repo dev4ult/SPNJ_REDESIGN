@@ -249,7 +249,6 @@ h3 {
     overflow-x: scroll;
     padding-bottom: 1em;
     width: 98%;
-    height: fit-content;
   }
 
   .team-slide + .team-slide {
@@ -346,28 +345,63 @@ h3 {
    ====================== */
 
 .division-section {
-  height: auto;
+  height: calc(98vh * 3);
+
+  .division-selection {
+    display: flex;
+    align-items: center;
+    margin: 0.5em 0 0 1em;
+    background-color: var(--link-background);
+    width: fit-content;
+    border-radius: 50px;
+    padding-inline: 0.5em;
+
+    .back {
+      display: none;
+      transform: rotate(180deg);
+      height: auto;
+    }
+
+    .option-container {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      .option {
+        list-style: none;
+        padding: 0.3em;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: var(--link-color);
+      }
+
+      .option + .option {
+        display: none;
+      }
+    }
+  }
 
   .division-container {
     display: flex;
-    overflow: auto;
-    white-space: nowrap;
-    width: 95%;
+    overflow-x: scroll;
+    width: 98%;
     padding-block: 3em;
+    position: absolute;
+    transition: 300ms ease;
 
     .division-slide {
-      width: 95vw;
-      padding-inline: 1em;
+      width: 98vw;
+      position: relative;
 
       .slide-content + .slide-content {
         margin-top: 3em;
       }
 
       .slide-content {
+        width: 98vw;
+        margin-left: 1em;
         .section-paragraph,
         .short-review {
-          white-space: normal;
-
           font-size: 1rem;
           color: var(--section-desc-color);
           margin-block: 1em;
