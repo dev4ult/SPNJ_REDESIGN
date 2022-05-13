@@ -295,18 +295,22 @@ h3 {
         color: var(--link-color);
         background-color: var(--card-background);
         width: 90%;
-        font-size: min(4vw, 6vw);
+        padding: 0.6em;
 
         .name-card {
           position: absolute;
           background-color: var(--card-title-background);
           text-align: center;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           padding: 0.3em 0.2em;
           font-size: 1.4rem;
           right: -10px;
           left: -10px;
           bottom: 10px;
-          color: var(--section-desc-color);
+          color: var(--background-color);
           font-weight: 600;
           z-index: 1;
         }
@@ -316,6 +320,7 @@ h3 {
           padding: 0.3em 0.7em;
           border-radius: 20px;
           margin-bottom: 0.2em;
+          width: fit-content;
         }
 
         .detail-button {
@@ -330,7 +335,6 @@ h3 {
         width: 200px;
         height: 200px;
         object-fit: cover;
-        filter: brightness(0.7);
       }
     }
   }
@@ -387,17 +391,17 @@ h3 {
     }
   }
 
-  .division-selection::before {
-    position: absolute;
-    content: '';
-    background-color: var(--section-desc-color);
-    top: 2px;
-    right: 2px;
-    left: -3px;
-    bottom: -4px;
-    border-radius: 50px;
-    z-index: -1;
-  }
+  // .division-selection::before {
+  //   position: absolute;
+  //   content: '';
+  //   background-color: var(--section-desc-color);
+  //   top: 1px;
+  //   right: 1px;
+  //   left: -3px;
+  //   bottom: -4px;
+  //   border-radius: 50px;
+  //   z-index: -1;
+  // }
 
   .division-container {
     display: flex;
