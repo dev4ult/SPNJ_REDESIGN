@@ -345,31 +345,32 @@ h3 {
    ====================== */
 
 .division-section {
-  height: calc(98vh * 3);
-
   .division-selection {
     display: flex;
-    align-items: center;
     margin: 0.5em 0 0 1em;
-    background-color: var(--link-background);
     width: fit-content;
     border-radius: 50px;
-    padding-inline: 0.5em;
+    background-color: var(--link-background);
+    align-items: center;
+    padding-block: 0.1em;
 
     .back {
       display: none;
       transform: rotate(180deg);
-      height: auto;
+    }
+
+    .forward {
+      display: flex;
+      top: -1px;
+      position: relative;
     }
 
     .option-container {
-      display: flex;
       align-items: center;
       position: relative;
 
       .option {
         list-style: none;
-        padding: 0.3em;
         text-transform: uppercase;
         font-weight: bold;
         color: var(--link-color);
@@ -378,12 +379,20 @@ h3 {
       .option + .option {
         display: none;
       }
+
+      .option:first-child {
+        margin-left: 0.5em;
+      }
+
+      .option:last-child {
+        margin-right: 0.5em;
+      }
     }
   }
 
   .division-container {
     display: flex;
-    overflow-x: scroll;
+    overflow-x: hidden;
     width: 98%;
     padding-block: 3em;
     position: absolute;
@@ -400,6 +409,7 @@ h3 {
       .slide-content {
         width: 98vw;
         margin-left: 1em;
+
         .section-paragraph,
         .short-review {
           font-size: 1rem;

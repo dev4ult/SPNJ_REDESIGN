@@ -34,14 +34,13 @@ function optionBehaviour() {
     arrowGoBack.style.display = 'none';
     options[option].style.display = 'block';
     options[option + 1].style.display = 'none';
-    arrowGoForward.style.display = 'block';
     Array.from(divisionSlide).forEach((slide) => (slide.style.transform = `translateX(calc(98vw * ${option}))`));
   } else if (option == 1) {
     arrowGoBack.style.display = 'flex';
+    arrowGoForward.style.display = 'flex';
     options[option - 1].style.display = 'none';
     options[option].style.display = 'block';
     options[option + 1].style.display = 'none';
-    arrowGoForward.style.display = 'block';
     Array.from(divisionSlide).forEach((slide) => (slide.style.transform = `translateX(calc(-98vw * ${option}))`));
   } else {
     arrowGoForward.style.display = 'none';
