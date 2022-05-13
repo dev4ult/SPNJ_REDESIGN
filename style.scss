@@ -62,7 +62,7 @@ img {
   border-radius: 5px;
 }
 
-.section-title:before {
+.section-title::before {
   position: absolute;
   content: '';
   top: 4px;
@@ -346,8 +346,9 @@ h3 {
 
 .division-section {
   .division-selection {
+    position: relative;
     display: flex;
-    margin: 0.5em 0 0 1em;
+    margin: 1.5em 0 0 1em;
     width: fit-content;
     border-radius: 50px;
     background-color: var(--link-background);
@@ -381,20 +382,32 @@ h3 {
       }
 
       .option:first-child {
-        margin-left: 0.5em;
+        margin-left: 0.6em;
       }
 
       .option:last-child {
-        margin-right: 0.5em;
+        margin-right: 0.6em;
       }
     }
+  }
+
+  .division-selection::before {
+    position: absolute;
+    content: '';
+    background-color: var(--section-desc-color);
+    top: 2px;
+    right: 2px;
+    left: -3px;
+    bottom: -4px;
+    border-radius: 50px;
+    z-index: -1;
   }
 
   .division-container {
     display: flex;
     overflow-x: hidden;
     width: 98%;
-    padding-block: 3em;
+    padding-block: 1.5em;
     position: absolute;
 
     .division-slide {

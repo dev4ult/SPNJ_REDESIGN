@@ -6,7 +6,7 @@ navToggle.addEventListener('click', () => {
   if (navListStyle.display == 'none') {
     navList.style.display = 'flex';
     navToggle.style.transform = 'rotate(0deg)';
-  } else {
+  } else if (navListStyle.display == 'flex') {
     navList.style.display = 'none';
     navToggle.style.transform = 'rotate(180deg)';
   }
