@@ -258,7 +258,6 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 1em;
 }
 
 .team-section .team-container {
@@ -268,7 +267,6 @@ h3 {
   -ms-flex-item-align: center;
       align-self: center;
   overflow-x: scroll;
-  padding-bottom: 1em;
   width: 98%;
 }
 
@@ -291,12 +289,12 @@ h3 {
 }
 
 .team-section .team-slide .team-card + .team-card {
-  margin-left: 10vw;
+  margin-left: 6.5vw;
 }
 
 .team-section .team-slide .team-card {
   position: relative;
-  padding: 0.5em 0.7em 3em;
+  padding: 0.5em 0.4em 1em;
   width: 80vw;
   height: 95vw;
   max-width: 378px;
@@ -318,34 +316,24 @@ h3 {
 }
 
 .team-section .team-slide .team-card .profile-description {
-  position: relative;
+  position: absolute;
   margin-top: 2em;
   z-index: 1;
   top: 10px;
   color: var(--link-color);
-  background-color: var(--card-background);
   width: 90%;
   padding: 0.6em;
+  font-size: 1rem;
 }
 
 .team-section .team-slide .team-card .profile-description .name-card {
   position: absolute;
-  background-color: var(--card-title-background);
-  text-align: center;
   height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   padding: 0.3em 0.2em;
   font-size: 1.4rem;
-  right: -10px;
-  left: -10px;
   bottom: 10px;
   color: var(--background-color);
   font-weight: 600;
@@ -369,11 +357,13 @@ h3 {
 }
 
 .team-section .team-slide .team-card .profile-img {
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
+  width: 90%;
+  height: 700px;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 20px;
+  -webkit-filter: brightness(0.7);
+          filter: brightness(0.7);
 }
 
 /* ======================

@@ -241,13 +241,11 @@ h3 {
   height: 120vw;
   max-height: 576px;
   display: flex;
-  padding-top: 1em;
 
   .team-container {
     display: flex;
     align-self: center;
     overflow-x: scroll;
-    padding-bottom: 1em;
     width: 98%;
   }
 
@@ -271,12 +269,12 @@ h3 {
     display: flex;
 
     .team-card + .team-card {
-      margin-left: 10vw;
+      margin-left: 6.5vw;
     }
 
     .team-card {
       position: relative;
-      padding: 0.5em 0.7em 3em;
+      padding: 0.5em 0.4em 1em;
       width: 80vw;
       height: 95vw;
       max-width: 378px;
@@ -288,27 +286,21 @@ h3 {
       justify-content: center;
 
       .profile-description {
-        position: relative;
+        position: absolute;
         margin-top: 2em;
         z-index: 1;
         top: 10px;
         color: var(--link-color);
-        background-color: var(--card-background);
         width: 90%;
         padding: 0.6em;
+        font-size: 1rem;
 
         .name-card {
           position: absolute;
-          background-color: var(--card-title-background);
-          text-align: center;
           height: 50px;
           display: flex;
-          align-items: center;
-          justify-content: center;
           padding: 0.3em 0.2em;
           font-size: 1.4rem;
-          right: -10px;
-          left: -10px;
           bottom: 10px;
           color: var(--background-color);
           font-weight: 600;
@@ -331,10 +323,11 @@ h3 {
       }
 
       .profile-img {
-        border-radius: 50%;
-        width: 200px;
-        height: 200px;
+        width: 90%;
+        height: 700px;
         object-fit: cover;
+        border-radius: 20px;
+        filter: brightness(0.7);
       }
     }
   }
