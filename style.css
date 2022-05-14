@@ -276,7 +276,7 @@ h3 {
 }
 
 .team-section .team-slide:first-child .team-card:first-child {
-  margin-left: 5vw;
+  margin-left: 11vw;
 }
 
 .team-section .team-slide:last-child .team-card:last-child {
@@ -308,6 +308,7 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .team-section .team-slide .team-card .profile-description {
@@ -325,8 +326,10 @@ h3 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  max-width: 60%;
   color: var(--background-color);
   font-weight: 600;
+  letter-spacing: 1.3px;
 }
 
 .team-section .team-slide .team-card .profile-description .person-name {
@@ -339,9 +342,25 @@ h3 {
   width: fit-content;
 }
 
-.team-section .team-slide .team-card .profile-description .socmed-link img {
-  width: 40px;
-  padding-left: 0.4em;
+.team-section .team-slide .team-card .team-socmed {
+  position: absolute;
+  right: 45px;
+  bottom: 10px;
+}
+
+.team-section .team-slide .team-card .team-socmed .socmed-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.team-section .team-slide .team-card .team-socmed .socmed-link img {
+  width: 30px;
+  margin-top: 0.6em;
 }
 
 .team-section .team-slide .team-card .profile-img {

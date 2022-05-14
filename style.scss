@@ -256,7 +256,7 @@ h3 {
 
   .team-slide:first-child {
     .team-card:first-child {
-      margin-left: 5vw;
+      margin-left: 11vw;
     }
   }
 
@@ -284,6 +284,7 @@ h3 {
       margin-inline: auto;
       display: flex;
       align-items: center;
+      position: relative;
 
       .profile-description {
         position: absolute;
@@ -297,8 +298,10 @@ h3 {
           font-size: 1.4rem;
           padding-left: 0.4em;
           width: fit-content;
+          max-width: 60%;
           color: var(--background-color);
           font-weight: 600;
+          letter-spacing: 1.3px;
         }
 
         .person-name {
@@ -308,10 +311,20 @@ h3 {
           margin: 0.4em 0 0.2em;
           width: fit-content;
         }
+      }
 
-        .socmed-link img {
-          width: 40px;
-          padding-left: 0.4em;
+      .team-socmed {
+        position: absolute;
+        right: 45px;
+        bottom: 10px;
+
+        .socmed-link {
+          display: flex;
+          flex-direction: column;
+          img {
+            width: 30px;
+            margin-top: 0.6em;
+          }
         }
       }
 
