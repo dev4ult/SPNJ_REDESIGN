@@ -267,6 +267,7 @@ h3 {
   -ms-flex-item-align: center;
       align-self: center;
   overflow-x: scroll;
+  overflow-y: hidden;
   width: 98%;
 }
 
@@ -286,6 +287,8 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  z-index: 0;
 }
 
 .team-section .team-slide .team-card + .team-card {
@@ -293,8 +296,7 @@ h3 {
 }
 
 .team-section .team-slide .team-card {
-  position: relative;
-  padding: 0.5em 0.4em 1em;
+  padding-inline: 0.2em;
   width: 80vw;
   height: 95vw;
   max-width: 378px;
@@ -303,48 +305,35 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .team-section .team-slide .team-card .profile-description {
   position: absolute;
-  margin-top: 2em;
-  z-index: 1;
-  top: 10px;
+  bottom: -55px;
   color: var(--link-color);
   width: 90%;
-  padding: 0.6em;
   font-size: 1rem;
+  padding-left: 0.5em;
 }
 
 .team-section .team-slide .team-card .profile-description .name-card {
-  position: absolute;
-  height: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0.3em 0.2em;
   font-size: 1.4rem;
-  bottom: 10px;
+  padding-left: 0.4em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   color: var(--background-color);
   font-weight: 600;
-  z-index: 1;
 }
 
 .team-section .team-slide .team-card .profile-description .person-name {
   background-color: rgba(0, 0, 0, 0.3);
-  padding: 0.3em 0.7em;
+  padding: 0.4em 0.7em;
   border-radius: 20px;
-  margin-bottom: 0.2em;
+  margin: 0.4em 0 0.2em;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -358,7 +347,7 @@ h3 {
 
 .team-section .team-slide .team-card .profile-img {
   width: 90%;
-  height: 700px;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px;
