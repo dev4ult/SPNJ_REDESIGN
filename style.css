@@ -329,14 +329,14 @@ h3 {
   max-width: 60%;
   color: var(--background-color);
   font-weight: 600;
-  letter-spacing: 1.3px;
+  letter-spacing: 1.5px;
 }
 
 .team-section .team-slide .team-card .profile-description .person-name {
   background-color: rgba(0, 0, 0, 0.3);
   padding: 0.4em 0.7em;
   border-radius: 20px;
-  margin: 0.4em 0 0.2em;
+  margin-top: 0.4em;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -360,7 +360,8 @@ h3 {
 
 .team-section .team-slide .team-card .team-socmed .socmed-link img {
   width: 30px;
-  margin-top: 0.6em;
+  margin-top: 0.7em;
+  margin-bottom: 0.2em;
 }
 
 .team-section .team-slide .team-card .profile-img {
@@ -448,10 +449,7 @@ h3 {
   position: relative;
   -webkit-transition: 300ms ease;
   transition: 300ms ease;
-}
-
-.division-section .division-container .division-slide .slide-content + .slide-content {
-  margin-top: 3em;
+  margin: 0 auto;
 }
 
 .division-section .division-container .division-slide .slide-content {
@@ -491,5 +489,26 @@ h3 {
   margin-top: 1em;
   padding: 0.5em;
   border-radius: 10px;
+}
+
+.division-section .division-container .division-slide .slide-content + .slide-content {
+  margin-top: 3em;
+}
+
+.division-section .division-container .division-slide .slide-content:nth-child(2) .section-content {
+  background-color: var(--section-shadow);
+  width: 85%;
+  margin-top: 2em;
+  text-align: center;
+  padding: 1em;
+  border-radius: 20px;
+  max-width: 350px;
+}
+
+.division-section .division-container .division-slide .slide-content:nth-child(2) .section-content .instructor-profile {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 1em;
 }
 /*# sourceMappingURL=style.css.map */
