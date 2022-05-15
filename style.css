@@ -271,6 +271,10 @@ h3 {
   width: 98%;
 }
 
+.team-section .team-container::-webkit-scrollbar {
+  display: none;
+}
+
 .team-section .team-slide + .team-slide {
   margin-left: 2em;
 }
@@ -377,8 +381,11 @@ h3 {
 /* ======================
    == DIVISION SECTION ==
    ====================== */
+.division-section {
+  height: auto;
+}
+
 .division-section .division-selection {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -441,7 +448,6 @@ h3 {
   overflow-x: hidden;
   width: 100%;
   padding-block: 1.5em;
-  position: absolute;
 }
 
 .division-section .division-container .division-slide {

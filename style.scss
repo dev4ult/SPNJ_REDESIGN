@@ -250,6 +250,10 @@ h3 {
     width: 98%;
   }
 
+  .team-container::-webkit-scrollbar {
+    display: none;
+  }
+
   .team-slide + .team-slide {
     margin-left: 2em;
   }
@@ -345,8 +349,9 @@ h3 {
    ====================== */
 
 .division-section {
+  height: auto;
+
   .division-selection {
-    position: relative;
     display: flex;
     margin: 1.5em 0 0 1em;
     width: fit-content;
@@ -408,7 +413,6 @@ h3 {
     overflow-x: hidden;
     width: 100%;
     padding-block: 1.5em;
-    position: absolute;
 
     .division-slide {
       width: 98vw;
