@@ -445,13 +445,12 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow-x: hidden;
-  width: 100%;
-  padding-block: 1.5em;
+  overflow: hidden;
+  width: 95vw;
+  padding: 1.5em 0.3em;
 }
 
 .division-section .division-container .division-slide {
-  width: 98vw;
   position: relative;
   -webkit-transition: 300ms ease;
   transition: 300ms ease;
@@ -460,7 +459,6 @@ h3 {
 
 .division-section .division-container .division-slide .slide-content {
   width: 98vw;
-  margin-left: 1em;
 }
 
 .division-section .division-container .division-slide .slide-content .section-paragraph,
@@ -503,12 +501,11 @@ h3 {
 
 .division-section .division-container .division-slide .slide-content:nth-child(2) .section-content {
   background-color: var(--section-shadow);
-  width: 85%;
+  width: clamp(230px, 94%, 400px);
   margin-top: 2em;
   text-align: center;
   padding: 1em;
   border-radius: 20px;
-  max-width: 350px;
 }
 
 .division-section .division-container .division-slide .slide-content:nth-child(2) .section-content .instructor-profile {
@@ -516,5 +513,72 @@ h3 {
   height: 200px;
   border-radius: 50%;
   margin-bottom: 1em;
+}
+
+.division-section .division-container .division-slide .projects {
+  width: 94%;
+}
+
+.division-section .division-container .division-slide .projects .project-container {
+  margin-top: 1em;
+}
+
+.division-section .division-container .division-slide .projects .project-container .project + .project {
+  margin-top: 1em;
+}
+
+.division-section .division-container .division-slide .projects .project-container .project {
+  position: relative;
+  min-height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.division-section .division-container .division-slide .projects .project-container .project .project-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: brightness(0.6);
+          filter: brightness(0.6);
+}
+
+.division-section .division-container .division-slide .projects .project-container .project .project-text-content {
+  position: absolute;
+  z-index: 1;
+  bottom: 10px;
+  text-align: left;
+  padding-inline: 0.5em;
+}
+
+.division-section .division-container .division-slide .projects .project-container .project .project-text-content .project-name {
+  font-size: 1.3rem;
+}
+
+.division-section .division-container .division-slide .projects .project-container .project .project-text-content .project-owner {
+  font-size: 1rem;
+  padding-block: 0.5em 1em;
+}
+
+.division-section .division-container .division-slide .projects .project-container .project .project-text-content .detail-button {
+  text-decoration: none;
+  background-color: var(--link-background);
+  color: var(--link-color);
+  padding: 0.3em 0.7em;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.division-section .division-container .division-slide .projects .project-container .project-span-col-2 {
+  grid-column: span 2;
+}
+
+.division-section .division-container .division-slide .projects .project-container .project-span-row-2 {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / span 2;
 }
 /*# sourceMappingURL=style.css.map */

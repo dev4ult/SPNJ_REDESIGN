@@ -396,33 +396,19 @@ h3 {
     }
   }
 
-  // .division-selection::before {
-  //   position: absolute;
-  //   content: '';
-  //   background-color: var(--section-desc-color);
-  //   top: 1px;
-  //   right: 1px;
-  //   left: -3px;
-  //   bottom: -4px;
-  //   border-radius: 50px;
-  //   z-index: -1;
-  // }
-
   .division-container {
     display: flex;
-    overflow-x: hidden;
-    width: 100%;
-    padding-block: 1.5em;
+    overflow: hidden;
+    width: 95vw;
+    padding: 1.5em 0.3em;
 
     .division-slide {
-      width: 98vw;
       position: relative;
       transition: 300ms ease;
       margin: 0 auto;
 
       .slide-content {
         width: 98vw;
-        margin-left: 1em;
 
         .section-paragraph,
         .short-review {
@@ -459,18 +445,80 @@ h3 {
       .slide-content:nth-child(2) {
         .section-content {
           background-color: var(--section-shadow);
-          width: 85%;
+          width: clamp(230px, 94%, 400px);
           margin-top: 2em;
           text-align: center;
           padding: 1em;
           border-radius: 20px;
-          max-width: 350px;
 
           .instructor-profile {
             width: 200px;
             height: 200px;
             border-radius: 50%;
             margin-bottom: 1em;
+          }
+        }
+      }
+
+      .projects {
+        width: 94%;
+
+        .project-container {
+          margin-top: 1em;
+          // display: grid;
+          // grid-template-columns: repeat(2, 1fr);
+          // gap: 6px;
+
+          .project + .project {
+            margin-top: 1em;
+          }
+
+          .project {
+            position: relative;
+            min-height: 200px;
+            display: flex;
+            overflow: hidden;
+            border-radius: 10px;
+
+            .project-img {
+              object-fit: cover;
+              filter: brightness(0.6);
+            }
+
+            .project-text-content {
+              position: absolute;
+              z-index: 1;
+              bottom: 10px;
+              text-align: left;
+              padding-inline: 0.5em;
+
+              .project-name {
+                font-size: 1.3rem;
+              }
+
+              .project-owner {
+                font-size: 1rem;
+                padding-block: 0.5em 1em;
+              }
+
+              .detail-button {
+                text-decoration: none;
+                background-color: var(--link-background);
+                color: var(--link-color);
+                padding: 0.3em 0.7em;
+                border-radius: 5px;
+                font-weight: 600;
+              }
+            }
+          }
+
+          .project-span-col-2 {
+            grid-column: span 2;
+          }
+
+          .project-span-row-2 {
+            grid-column-start: 2;
+            grid-row: 1 / span 2;
           }
         }
       }
