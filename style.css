@@ -11,6 +11,9 @@
 html {
   --background-color: #effffd;
   --background-color-accent: #b8fff9;
+  --text-color-in-dark-bg: #effffd;
+  --text-color-in-light-bg: black;
+  --text-color-neon: rgb(45, 232, 45);
   --hero-title-background: #7fffd6;
   --hero-title-background-before: #95efce;
   --title-color: #3e467f;
@@ -331,7 +334,7 @@ h3 {
   width: -moz-fit-content;
   width: fit-content;
   max-width: 60%;
-  color: var(--background-color);
+  color: var(--text-color-in-light-bg);
   font-weight: 600;
   letter-spacing: 1.5px;
 }
@@ -515,6 +518,10 @@ h3 {
   margin-bottom: 1em;
 }
 
+.division-section .division-container .division-slide .slide-content:nth-child(2) .section-content .instructor-name {
+  text-transform: none;
+}
+
 .division-section .division-container .division-slide .projects {
   width: 94%;
 }
@@ -550,24 +557,46 @@ h3 {
   bottom: 10px;
   text-align: left;
   padding-inline: 0.5em;
+  width: 100%;
 }
 
 .division-section .division-container .division-slide .projects .project-container .project .project-text-content .project-name {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  color: var(--text-color-neon);
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  letter-spacing: 1px;
 }
 
 .division-section .division-container .division-slide .projects .project-container .project .project-text-content .project-owner {
   font-size: 1rem;
-  padding-block: 0.5em 1em;
+  margin-top: 1em;
+  color: var(--text-color-in-light-bg);
+  background-color: var(--background-color);
+  padding: 0.3em 0.5em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 60%;
+  border-radius: 5px;
+  text-transform: none;
 }
 
 .division-section .division-container .division-slide .projects .project-container .project .project-text-content .detail-button {
+  position: absolute;
   text-decoration: none;
-  background-color: var(--link-background);
-  color: var(--link-color);
+  background-color: rgba(117, 117, 117, 0.3);
+  color: var(--text-color-in-dark-bg);
   padding: 0.3em 0.7em;
   border-radius: 5px;
   font-weight: 600;
+  border-radius: 20px;
+  right: 9px;
+  bottom: 0;
 }
 
 .division-section .division-container .division-slide .projects .project-container .project-span-col-2 {
