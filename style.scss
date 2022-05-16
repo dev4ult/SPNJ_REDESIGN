@@ -16,12 +16,13 @@ html {
   --text-color-in-light-bg: black;
   --text-color-neon: rgb(45, 232, 45);
 
-  --hero-title-background: #7fffd6;
-  --hero-title-background-before: #95efce;
+  --hero-title-background: #1ee3cf;
+  --hero-title-background-before: #1f8ea3;
+  --pnj-span-color: #00aeff;
 
   --title-color: #3e467f;
-  --title-background: #1ee3cf;
-  --title-background-before: #1f8ea3;
+  --title-background: #7fffd6;
+  --title-background-before: #95efce;
 
   --section-desc-color: #395ea6;
   --section-shadow: #d1ebe7;
@@ -182,7 +183,7 @@ h3 {
       }
 
       .pnj {
-        color: var(--link-background-before);
+        color: var(--pnj-span-color);
         margin-top: 0.15em;
       }
 
@@ -293,14 +294,16 @@ h3 {
       display: flex;
       align-items: center;
       position: relative;
+      z-index: 1;
 
       .profile-description {
         position: absolute;
-        bottom: 10px;
+        bottom: 15px;
         color: var(--link-color);
         width: 90%;
         font-size: 1rem;
         padding-left: 0.5em;
+        z-index: 0;
 
         .name-card {
           font-size: 1.4rem;
@@ -313,11 +316,26 @@ h3 {
         }
 
         .person-name {
-          background-color: rgba(0, 0, 0, 0.3);
-          padding: 0.4em 0.7em;
-          border-radius: 20px;
+          background-color: var(--hero-title-background);
+          color: var(--title-color);
+          padding: 0.3em 0.5em;
+          border-radius: 5px;
           margin-top: 0.4em;
           width: fit-content;
+          position: relative;
+          font-weight: 600;
+        }
+
+        .person-name::before {
+          position: absolute;
+          content: '';
+          top: 3px;
+          bottom: -3px;
+          right: 3px;
+          left: -3px;
+          background-color: var(--hero-title-background-before);
+          border-radius: 5px;
+          z-index: -1;
         }
       }
 
@@ -514,7 +532,7 @@ h3 {
 
               .project-owner {
                 font-size: 1rem;
-                margin-top: 1em;
+                margin-block: 0.5em 0.2em;
                 color: var(--title-color);
                 background-color: var(--hero-title-background);
                 padding: 0.3em 0.5em;
@@ -522,6 +540,8 @@ h3 {
                 max-width: 60%;
                 border-radius: 5px;
                 position: relative;
+                text-transform: none;
+                font-family: 'Montserrat', sans-serif;
               }
 
               .project-owner::before {
