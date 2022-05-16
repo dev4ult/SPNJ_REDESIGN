@@ -357,7 +357,7 @@ h3 {
 
   .division-selection {
     display: flex;
-    margin: 1.5em 0 0 1em;
+    margin: 1.5em 0 0 0.7em;
     width: fit-content;
     border-radius: 50px;
     background-color: var(--link-background);
@@ -515,13 +515,25 @@ h3 {
               .project-owner {
                 font-size: 1rem;
                 margin-top: 1em;
-                color: var(--text-color-in-light-bg);
-                background-color: var(--background-color);
+                color: var(--title-color);
+                background-color: var(--hero-title-background);
                 padding: 0.3em 0.5em;
                 width: fit-content;
                 max-width: 60%;
                 border-radius: 5px;
-                text-transform: none;
+                position: relative;
+              }
+
+              .project-owner::before {
+                position: absolute;
+                content: '';
+                left: -3px;
+                bottom: -3px;
+                top: 3px;
+                right: 3px;
+                background-color: var(--hero-title-background-before);
+                z-index: -1;
+                border-radius: 5px;
               }
 
               .detail-button {
