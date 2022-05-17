@@ -586,10 +586,14 @@ h3 {
     position: relative;
 
     .registration-gate-link {
+      text-align: center;
       position: relative;
       margin: auto;
       background-color: var(--link-background);
       color: var(--link-color);
+      padding: 0.5em 1em;
+      display: flex;
+      align-items: center;
     }
 
     .registration-gate-link::before {
