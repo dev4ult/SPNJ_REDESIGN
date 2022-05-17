@@ -14,15 +14,14 @@ html {
 
   --text-color-in-dark-bg: #effffd;
   --text-color-in-light-bg: black;
-  --text-color-neon: rgb(45, 232, 45);
 
-  --hero-title-background: #1ee3cf;
-  --hero-title-background-before: #1f8ea3;
+  --hero-title-background: #7fffd6;
+  --hero-title-background-before: #95efce;
   --pnj-span-color: #00aeff;
 
   --title-color: #3e467f;
-  --title-background: #7fffd6;
-  --title-background-before: #95efce;
+  --title-background: #1ee3cf;
+  --title-background-before: #1f8ea3;
 
   --section-desc-color: #395ea6;
   --section-shadow: #d1ebe7;
@@ -33,7 +32,7 @@ html {
 
   --card-background: #2999b0;
   --card-title-background: #12efd9;
-  --card-shadow: #12efd9;
+  --card-button-background: rgba(117, 117, 117, 0.3);
 }
 
 body {
@@ -298,7 +297,7 @@ h3 {
 
       .profile-description {
         position: absolute;
-        bottom: 15px;
+        bottom: 13px;
         color: var(--link-color);
         width: 90%;
         font-size: 1rem;
@@ -307,10 +306,9 @@ h3 {
 
         .name-card {
           font-size: 1.4rem;
-          padding-left: 0.4em;
           width: fit-content;
           max-width: 60%;
-          color: var(--text-color-in-light-bg);
+          color: var(--text-color-in-dark-bg);
           font-weight: 600;
           letter-spacing: 1.5px;
         }
@@ -324,18 +322,6 @@ h3 {
           width: fit-content;
           position: relative;
           font-weight: 600;
-        }
-
-        .person-name::before {
-          position: absolute;
-          content: '';
-          top: 3px;
-          bottom: -3px;
-          right: 3px;
-          left: -3px;
-          background-color: var(--hero-title-background-before);
-          border-radius: 5px;
-          z-index: -1;
         }
       }
 
@@ -359,7 +345,7 @@ h3 {
         width: 90%;
         height: 100%;
         object-fit: cover;
-        border-radius: 20px;
+        border-radius: 10px;
         filter: brightness(0.7);
       }
     }
@@ -499,6 +485,16 @@ h3 {
             margin-top: 1em;
           }
 
+          .project:last-child {
+            display: flex;
+            background-color: var(--link-background);
+
+            .project-name {
+              margin: auto;
+              color: var(--link-color);
+            }
+          }
+
           .project {
             position: relative;
             min-height: 200px;
@@ -521,8 +517,7 @@ h3 {
 
               .project-name {
                 font-size: 1.2rem;
-                color: var(--text-color-neon);
-
+                color: var(--text-color-in-dark-bg);
                 background-size: 100% 2px;
                 background-repeat: no-repeat;
                 background-position: left bottom;
@@ -532,34 +527,23 @@ h3 {
 
               .project-owner {
                 font-size: 1rem;
+                text-align: center;
                 margin-block: 0.5em 0.2em;
                 color: var(--title-color);
                 background-color: var(--hero-title-background);
                 padding: 0.3em 0.5em;
                 width: fit-content;
-                max-width: 60%;
+                max-width: 50%;
                 border-radius: 5px;
                 position: relative;
                 text-transform: none;
                 font-family: 'Montserrat', sans-serif;
               }
 
-              .project-owner::before {
-                position: absolute;
-                content: '';
-                left: -3px;
-                bottom: -3px;
-                top: 3px;
-                right: 3px;
-                background-color: var(--hero-title-background-before);
-                z-index: -1;
-                border-radius: 5px;
-              }
-
               .detail-button {
                 position: absolute;
                 text-decoration: none;
-                background-color: rgba(117, 117, 117, 0.3);
+                background-color: var(--card-button-background);
                 color: var(--text-color-in-dark-bg);
                 padding: 0.3em 0.7em;
                 border-radius: 5px;
@@ -580,6 +564,59 @@ h3 {
             grid-row: 1 / span 2;
           }
         }
+      }
+    }
+  }
+}
+
+/* ============================
+   == REGISTRATION LINK GATE ==
+   ============================ */
+
+.registration-gate-section {
+  height: auto;
+  background-color: var(--background-color-accent);
+  position: relative;
+  z-index: -2;
+
+  .registration-gate-container {
+    min-height: 50vh;
+    display: flex;
+    width: 100%;
+    position: relative;
+
+    .registration-gate-link {
+      position: relative;
+      margin: auto;
+      background-color: var(--link-background);
+      color: var(--link-color);
+    }
+
+    .registration-gate-link::before {
+      position: absolute;
+      background-color: var(--link-background-before);
+      content: '';
+      top: -5px;
+      bottom: -5px;
+      right: 5px;
+      left: 5px;
+    }
+
+    .logo-container {
+      position: absolute;
+      display: flex;
+      z-index: -2;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+
+      .logo-subject:first-child,
+      .logo-subject:last-child {
+        display: none;
+      }
+
+      .logo-subject {
+        width: 35vh;
       }
     }
   }
