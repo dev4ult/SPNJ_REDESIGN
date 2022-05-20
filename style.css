@@ -232,7 +232,7 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 33vh;
+  height: 27vh;
 }
 
 .about-section .about-container {
@@ -247,7 +247,7 @@ h3 {
 
 @media (max-width: 320px) {
   .about-section {
-    height: calc(90vh - 110vw);
+    height: calc(75vh - 110vw);
   }
 }
 

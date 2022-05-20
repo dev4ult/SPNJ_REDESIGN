@@ -220,7 +220,8 @@ h3 {
 
 .about-section {
   display: flex;
-  height: 33vh;
+  height: 27vh;
+
   .about-container {
     align-self: center;
 
@@ -232,7 +233,7 @@ h3 {
 
 @media (max-width: 320px) {
   .about-section {
-    height: calc(90vh - 110vw);
+    height: calc(75vh - 110vw);
   }
 }
 
