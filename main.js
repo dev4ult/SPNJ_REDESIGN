@@ -49,3 +49,13 @@ function optionBehaviour() {
     Array.from(divisionSlide).forEach((slide) => (slide.style.transform = `translateX(calc(-98vw * ${option}))`));
   }
 }
+
+const questionTextarea = document.getElementById('question');
+
+questionTextarea.addEventListener('mouseenter', (_) => {
+  questionTextarea.rows = 5;
+});
+
+questionTextarea.addEventListener('mouseleave', (_) => {
+  questionTextarea.rows = 1;
+});

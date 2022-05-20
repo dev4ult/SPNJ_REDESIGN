@@ -255,8 +255,7 @@ h3 {
    == TEAM SECTION ==
    ================== */
 .team-section {
-  background-color: var(--background-color-accent);
-  height: 120vw;
+  height: 105vw;
   max-height: 576px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -271,7 +270,7 @@ h3 {
       align-self: center;
   overflow-x: scroll;
   overflow-y: hidden;
-  width: 98%;
+  width: 100%;
 }
 
 .team-section .team-container::-webkit-scrollbar {
@@ -641,7 +640,7 @@ h3 {
 }
 
 .registration-gate-section .registration-gate-container {
-  min-height: 50vh;
+  min-height: 75vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -693,6 +692,83 @@ h3 {
 }
 
 .registration-gate-section .registration-gate-container .logo-container .logo-subject {
-  width: 35vh;
+  width: 60vw;
+}
+
+/* ====================
+   == FOOTER SECTION ==
+   ==================== */
+.contact-socmed {
+  height: auto;
+  padding-block: 2em;
+}
+
+.contact-socmed .form-container {
+  margin-block: 1em;
+}
+
+.contact-socmed .form-container .form-data {
+  position: relative;
+  max-width: 350px;
+}
+
+.contact-socmed .form-container .form-data input,
+.contact-socmed .form-container .form-data textarea {
+  width: 60%;
+  margin-block: 0.6em;
+  resize: none;
+  padding: 0.5em;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid var(--link-background-before);
+  background-color: var(--background-color);
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+  font-family: inherit;
+}
+
+.contact-socmed .form-container .form-data input:focus,
+.contact-socmed .form-container .form-data textarea:focus {
+  width: 70%;
+  outline: 1px solid var(--link-background);
+  border: 1px solid var(--link-background);
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+}
+
+.contact-socmed .form-container .form-data label {
+  position: absolute;
+  top: 18px;
+  left: 5px;
+  font-size: 1rem;
+  background-color: var(--background-color);
+  padding-inline: 0.3em;
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+  font-weight: 600;
+  color: var(--section-desc-color);
+  border-radius: 50px;
+}
+
+.contact-socmed .form-container .form-data input:focus ~ label,
+.contact-socmed .form-container .form-data input:not(:placeholder-shown):not(:focus) ~ label,
+.contact-socmed .form-container .form-data textarea:not(:placeholder-shown):not(:focus) ~ label,
+.contact-socmed .form-container .form-data textarea:focus ~ label {
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+  font-size: 0.8rem;
+  top: 2px;
+}
+
+.contact-socmed .socmed .socmed-container {
+  margin-block: 1em;
+}
+
+.contact-socmed .socmed .socmed-container .socmed-link {
+  margin-right: 1em;
+}
+
+.contact-socmed .socmed .socmed-container .socmed-link img {
+  width: 50px;
 }
 /*# sourceMappingURL=style.css.map */
