@@ -325,7 +325,6 @@ h3 {
   bottom: 13px;
   color: var(--link-color);
   width: 90%;
-  font-size: var(--fs-small);
   padding-left: 0.5em;
   z-index: 0;
 }
@@ -338,6 +337,7 @@ h3 {
   color: var(--text-color-in-dark-bg);
   font-weight: 600;
   letter-spacing: 1.5px;
+  font-size: var(--fs-medium);
 }
 
 .team-section .team-slide .team-card .profile-description .person-name {
@@ -351,6 +351,7 @@ h3 {
   width: fit-content;
   position: relative;
   font-weight: 600;
+  font-size: var(--fs-small);
 }
 
 .team-section .team-slide .team-card .team-socmed {
@@ -396,7 +397,8 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 1.5em 0 0 0.7em;
+  margin-top: 1.5em;
+  margin-left: 0.8em;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -458,15 +460,19 @@ h3 {
   padding: 1.5em 0.3em;
 }
 
+.division-section .division-container .division-slide + .division-slide {
+  margin-left: 1rem;
+}
+
 .division-section .division-container .division-slide {
   position: relative;
   -webkit-transition: 300ms ease;
   transition: 300ms ease;
-  margin: 0 auto;
+  margin-inline: auto;
 }
 
 .division-section .division-container .division-slide .slide-content {
-  width: 98vw;
+  width: 95vw;
 }
 
 .division-section .division-container .division-slide .slide-content .instructor-name {
