@@ -222,7 +222,7 @@ h3 {
 
 .about-section {
   display: flex;
-  height: 27vh;
+  height: clamp(30vh, 47vw, 40vh);
 
   .about-container {
     align-self: center;
@@ -261,18 +261,18 @@ h3 {
   }
 
   .team-slide + .team-slide {
-    margin-left: 2em;
+    margin-left: 4vw;
   }
 
   .team-slide:first-child {
     .team-card:first-child {
-      margin-left: 11vw;
+      margin-left: 10vw;
     }
   }
 
   .team-slide:last-child {
     .team-card:last-child {
-      margin-right: 5vw;
+      margin-right: 3vw;
     }
   }
 
@@ -282,7 +282,7 @@ h3 {
     z-index: 0;
 
     .team-card + .team-card {
-      margin-left: 6.5vw;
+      margin-left: 4vw;
     }
 
     .team-card {
@@ -302,12 +302,11 @@ h3 {
         bottom: 13px;
         color: var(--link-color);
         width: 90%;
-        font-size: 1rem;
+        font-size: var(--fs-small);
         padding-left: 0.5em;
         z-index: 0;
 
         .name-card {
-          font-size: 1.4rem;
           width: fit-content;
           max-width: 60%;
           color: var(--text-color-in-dark-bg);
@@ -329,14 +328,14 @@ h3 {
 
       .team-socmed {
         position: absolute;
-        right: 45px;
+        right: 15%;
         bottom: 10px;
 
         .socmed-link {
           display: flex;
           flex-direction: column;
           img {
-            width: 30px;
+            width: clamp(30px, 7vw, 45px);
             margin-top: 0.7em;
             margin-bottom: 0.2em;
           }
@@ -390,6 +389,7 @@ h3 {
         text-transform: uppercase;
         font-weight: bold;
         color: var(--link-color);
+        font-size: var(--fs-small);
       }
 
       .option + .option {

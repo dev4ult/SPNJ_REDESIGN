@@ -234,7 +234,7 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 27vh;
+  height: clamp(30vh, 47vw, 40vh);
 }
 
 .about-section .about-container {
@@ -280,15 +280,15 @@ h3 {
 }
 
 .team-section .team-slide + .team-slide {
-  margin-left: 2em;
+  margin-left: 4vw;
 }
 
 .team-section .team-slide:first-child .team-card:first-child {
-  margin-left: 11vw;
+  margin-left: 10vw;
 }
 
 .team-section .team-slide:last-child .team-card:last-child {
-  margin-right: 5vw;
+  margin-right: 3vw;
 }
 
 .team-section .team-slide {
@@ -300,7 +300,7 @@ h3 {
 }
 
 .team-section .team-slide .team-card + .team-card {
-  margin-left: 6.5vw;
+  margin-left: 4vw;
 }
 
 .team-section .team-slide .team-card {
@@ -325,13 +325,12 @@ h3 {
   bottom: 13px;
   color: var(--link-color);
   width: 90%;
-  font-size: 1rem;
+  font-size: var(--fs-small);
   padding-left: 0.5em;
   z-index: 0;
 }
 
 .team-section .team-slide .team-card .profile-description .name-card {
-  font-size: 1.4rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -356,7 +355,7 @@ h3 {
 
 .team-section .team-slide .team-card .team-socmed {
   position: absolute;
-  right: 45px;
+  right: 15%;
   bottom: 10px;
 }
 
@@ -371,7 +370,7 @@ h3 {
 }
 
 .team-section .team-slide .team-card .team-socmed .socmed-link img {
-  width: 30px;
+  width: clamp(30px, 7vw, 45px);
   margin-top: 0.7em;
   margin-bottom: 0.2em;
 }
@@ -435,6 +434,7 @@ h3 {
   text-transform: uppercase;
   font-weight: bold;
   color: var(--link-color);
+  font-size: var(--fs-small);
 }
 
 .division-section .division-selection .option-container .option + .option {
