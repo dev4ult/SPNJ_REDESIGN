@@ -27,6 +27,11 @@ html {
   --card-background: #2999b0;
   --card-title-background: #12efd9;
   --card-button-background: rgba(117, 117, 117, 0.3);
+  --fs-xl: clamp(2.5rem, 10vw, 4rem);
+  --fs-large: clamp(1.5rem, 7vw, 2rem);
+  --fs-medium: clamp(1.3rem, 5vw, 1.7rem);
+  --fs-small: clamp(1rem, 4vw, 1.5rem);
+  --fs-xs: clamp(0.7rem, 3vw, 1.2rem);
 }
 
 body {
@@ -54,12 +59,11 @@ img {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 1.5rem;
+  font-size: var(--fs-large);
   padding: 0.1em 0.3em;
   color: var(--title-color);
   background-color: var(--title-background);
   position: relative;
-  border-radius: 5px;
 }
 
 .section-title::before {
@@ -71,13 +75,13 @@ img {
   left: -4px;
   background-color: var(--title-background-before);
   z-index: -1;
-  border-radius: 5px;
 }
 
-.section-description {
+.paragraph {
   margin-top: 1em;
   color: var(--section-desc-color);
   font-weight: 600;
+  font-size: var(--fs-small);
 }
 
 /* ======================
@@ -179,7 +183,7 @@ h3 {
 
 .hero-section .hero-container .hero-title {
   color: var(--title-color);
-  font-size: 2.5rem;
+  font-size: var(--fs-xl);
   margin-inline: auto;
 }
 
@@ -193,7 +197,6 @@ h3 {
   background-color: var(--hero-title-background);
   padding-inline: 0.2em;
   position: relative;
-  border-radius: 7px;
 }
 
 .hero-section .hero-container .hero-title .pnj {
@@ -209,7 +212,6 @@ h3 {
   bottom: -5px;
   right: 5px;
   left: -5px;
-  border-radius: 7px;
   background-color: var(--hero-title-background-before);
   z-index: -1;
 }
@@ -222,7 +224,7 @@ h3 {
   margin: 1.2em auto 0;
   text-transform: uppercase;
   font-style: italic;
-  font-size: 1rem;
+  font-size: var(--fs-medium);
 }
 
 /* ===================
@@ -241,7 +243,7 @@ h3 {
       align-self: center;
 }
 
-.about-section .about-container .section-description {
+.about-section .about-container .paragraph {
   line-height: 1.5;
 }
 
@@ -467,9 +469,11 @@ h3 {
   width: 98vw;
 }
 
-.division-section .division-container .division-slide .slide-content .section-paragraph,
+.division-section .division-container .division-slide .slide-content .instructor-name {
+  font-size: var(--fs-medium);
+}
+
 .division-section .division-container .division-slide .slide-content .short-review {
-  font-size: 1rem;
   color: var(--section-desc-color);
   margin-top: 1em;
   font-weight: 600;
@@ -547,6 +551,7 @@ h3 {
 .division-section .division-container .division-slide .projects .project-container .project:last-child .project-name {
   margin: auto;
   color: var(--link-color);
+  font-size: var(--fs-medium);
 }
 
 .division-section .division-container .division-slide .projects .project-container .project {
@@ -556,7 +561,6 @@ h3 {
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
-  border-radius: 10px;
 }
 
 .division-section .division-container .division-slide .projects .project-container .project .project-img {
@@ -576,7 +580,6 @@ h3 {
 }
 
 .division-section .division-container .division-slide .projects .project-container .project .project-text-content .project-name {
-  font-size: 1.2rem;
   color: var(--text-color-in-dark-bg);
   background-size: 100% 2px;
   background-repeat: no-repeat;
@@ -585,10 +588,11 @@ h3 {
   width: -moz-fit-content;
   width: fit-content;
   letter-spacing: 1px;
+  font-size: var(--fs-medium);
 }
 
 .division-section .division-container .division-slide .projects .project-container .project .project-text-content .project-owner {
-  font-size: 1rem;
+  font-size: var(--fs-small);
   text-align: center;
   margin-block: 0.5em 0.2em;
   color: var(--title-color);
@@ -605,6 +609,7 @@ h3 {
 }
 
 .division-section .division-container .division-slide .projects .project-container .project .project-text-content .detail-button {
+  font-size: var(--fs-small);
   position: absolute;
   text-decoration: none;
   background-color: var(--card-button-background);
@@ -654,23 +659,25 @@ h3 {
   margin: auto;
   background-color: var(--link-background);
   color: var(--link-color);
-  padding: 0.5em 1em;
+  padding-block: 0.4em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: clamp(200px, 75%, 300px);
+  font-size: var(--fs-large);
 }
 
 .registration-gate-section .registration-gate-container .registration-gate-link::before {
   position: absolute;
   background-color: var(--link-background-before);
   content: '';
-  top: -5px;
-  bottom: -5px;
-  right: 5px;
-  left: 5px;
+  top: -8px;
+  bottom: -8px;
+  right: 8px;
+  left: 8px;
 }
 
 .registration-gate-section .registration-gate-container .logo-container {
@@ -692,7 +699,7 @@ h3 {
 }
 
 .registration-gate-section .registration-gate-container .logo-container .logo-subject {
-  width: 60vw;
+  width: clamp(250px, 50vw, 350px);
 }
 
 /* ====================
@@ -709,7 +716,7 @@ h3 {
 
 .contact-socmed .form-container .form-data {
   position: relative;
-  max-width: 350px;
+  max-width: 500px;
 }
 
 .contact-socmed .form-container .form-data input,
@@ -718,7 +725,7 @@ h3 {
   margin-block: 0.6em;
   resize: none;
   padding: 0.5em;
-  font-size: 1rem;
+  font-size: var(--fs-small);
   border-radius: 4px;
   border: 1px solid var(--link-background-before);
   background-color: var(--background-color);
@@ -738,9 +745,10 @@ h3 {
 
 .contact-socmed .form-container .form-data label {
   position: absolute;
-  top: 18px;
+  -webkit-transform: translateY(90%);
+          transform: translateY(90%);
   left: 5px;
-  font-size: 1rem;
+  font-size: var(--fs-small);
   background-color: var(--background-color);
   padding-inline: 0.3em;
   -webkit-transition: 200ms ease;
@@ -756,8 +764,9 @@ h3 {
 .contact-socmed .form-container .form-data textarea:focus ~ label {
   -webkit-transition: 200ms ease;
   transition: 200ms ease;
-  font-size: 0.8rem;
-  top: 2px;
+  font-size: var(--fs-xs);
+  -webkit-transform: translateY(20%);
+          transform: translateY(20%);
 }
 
 .contact-socmed .socmed .socmed-container {
