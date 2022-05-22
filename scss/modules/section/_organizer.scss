@@ -1,0 +1,113 @@
+@use '../root/general';
+@use '../root/font-size' as fs;
+
+.organizer-section {
+  height: 105vw;
+  max-height: 576px;
+  display: flex;
+
+  .container {
+    display: flex;
+    align-self: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100%;
+  }
+
+  .container::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.slide {
+  display: flex;
+  position: relative;
+  z-index: 0;
+}
+
+.card + .card {
+  margin-left: 4vw;
+}
+
+.card {
+  padding-inline: 0.2em;
+  width: 80vw;
+  height: 95vw;
+  max-width: 378px;
+  max-height: 473px;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+
+  .socmed-container {
+    position: absolute;
+    right: 15%;
+    bottom: 10px;
+  }
+
+  .profile-picture {
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: brightness(0.7);
+  }
+}
+
+.name_and_role {
+  position: absolute;
+  bottom: 13px;
+  color: var(--link-color);
+  width: 90%;
+  padding-left: 0.5em;
+  z-index: 0;
+}
+
+.role {
+  width: fit-content;
+  max-width: 60%;
+  color: var(--text-color-in-dark-bg);
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  font-size: fs.$medium;
+}
+
+.name {
+  background-color: var(--hero-title-background);
+  color: var(--title-color);
+  padding: 0.3em 0.5em;
+  border-radius: 5px;
+  margin-top: 0.4em;
+  width: fit-content;
+  position: relative;
+  font-weight: 600;
+  font-size: fs.$small;
+}
+
+.socmed-link {
+  display: flex;
+  flex-direction: column;
+  img {
+    width: clamp(30px, 7vw, 45px);
+    margin-top: 0.7em;
+    margin-bottom: 0.2em;
+  }
+}
+
+.slide + .slide {
+  margin-left: 4vw;
+}
+
+.slide:first-child {
+  .card:first-child {
+    margin-left: 10vw;
+  }
+}
+
+.slide:last-child {
+  .card:last-child {
+    margin-right: 3vw;
+  }
+}

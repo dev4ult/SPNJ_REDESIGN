@@ -1,0 +1,72 @@
+@use '../root/general';
+@use '../root/font-size' as fs;
+
+.contact-socmed {
+  height: auto;
+  padding-block: 2em;
+
+  .form-container {
+    margin-block: 1em;
+    .form-data {
+      position: relative;
+      max-width: 500px;
+
+      input,
+      textarea {
+        width: 60%;
+        margin-block: 0.6em;
+        resize: none;
+        padding: 0.5em;
+        font-size: fs.$small;
+        border-radius: 4px;
+        border: 1px solid var(--link-background-before);
+        background-color: var(--background-color);
+        transition: 200ms ease;
+        font-family: inherit;
+      }
+
+      input:focus,
+      textarea:focus {
+        width: 70%;
+        outline: 1px solid var(--link-background);
+        border: 1px solid var(--link-background);
+        transition: 200ms ease;
+      }
+
+      label {
+        position: absolute;
+        transform: translateY(90%);
+        left: 5px;
+        font-size: fs.$small;
+        background-color: var(--background-color);
+        padding-inline: 0.3em;
+        transition: 200ms ease;
+        font-weight: 600;
+        color: var(--section-desc-color);
+        border-radius: 50px;
+      }
+
+      input:focus ~ label,
+      input:not(:placeholder-shown):not(:focus) ~ label,
+      textarea:not(:placeholder-shown):not(:focus) ~ label,
+      textarea:focus ~ label {
+        transition: 200ms ease;
+        font-size: fs.$extra-small;
+        transform: translateY(20%);
+      }
+    }
+  }
+
+  .socmed {
+    .socmed-container {
+      margin-block: 1em;
+
+      .socmed-link {
+        margin-right: 1em;
+        img {
+          width: 50px;
+        }
+      }
+    }
+  }
+}

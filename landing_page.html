@@ -4,10 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
     <title>[] Welcome to SPNJ []</title>
   </head>
-  <body>
+  <body class="light">
+    <!-- NAVIGATION BAR -->
     <nav class="nav">
       <a class="nav-toggle">
         <svg width="30" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -31,9 +35,10 @@
         </svg>
       </a>
     </nav>
+    <!-- HERO SECTION -->
     <header class="hero-section">
-      <div class="container hero-container">
-        <h1 class="hero-title">
+      <div class="container">
+        <h1 class="title">
           <span class="sahabat">sahabat</span>
           <span class="pnj">pnj</span>
         </h1>
@@ -41,23 +46,26 @@
         <div class="custom-vector"></div>
       </div>
     </header>
+    <!-- MAIN SECTION -->
     <main>
+      <!-- ABOUT SECTION -->
       <section class="about-section" id="about">
         <div class="container about-container">
           <h2 class="section-title">about us</h2>
           <p class="paragraph">Sahabat PNJ merupakan salah satu Kelompok Studi Mahasiswa (KSM) yang dinaungi oleh Himpunang Mahasiswa TIK (HIMATIK) yang berada di Politeknik Negeri Jakarta</p>
         </div>
       </section>
-      <section class="team-section" id="team">
-        <div class="container team-container">
-          <div class="team-slide">
-            <div class="team-card">
-              <img src="image/test.png" class="profile-img" alt="person profile" />
-              <div class="profile-description">
-                <h3 class="name-card">leader</h3>
-                <h4 class="person-name">Aldi Suradi Brina</h4>
+      <!-- ORGANIZER SECTION -->
+      <section class="organizer-section" id="organizer">
+        <div class="container">
+          <div class="slide">
+            <div class="card">
+              <img src="image/test.png" class="profile-picture" alt="person profile" />
+              <div class="name_and_role">
+                <h3 class="role">leader</h3>
+                <h4 class="name">Aldi Suradi Brina</h4>
               </div>
-              <div class="team-socmed">
+              <div class="socmed-container">
                 <a class="socmed-link" href="#">
                   <img src="logo/instagram.svg" alt="instagram logo" />
                 </a>
@@ -72,101 +80,13 @@
                 </a>
               </div>
             </div>
-            <div class="team-card">
-              <img src="image/test.png" class="profile-img" alt="person profile" />
-              <div class="profile-description">
-                <h3 class="name-card">vice leader</h3>
-                <h4 class="person-name">Aldi Suradi Brina</h4>
+            <div class="card">
+              <img src="image/test.png" class="profile-picture" alt="person profile" />
+              <div class="name_and_role">
+                <h3 class="role">vice leader</h3>
+                <h4 class="name">Aldi Suradi Brina</h4>
               </div>
-              <div class="team-socmed">
-                <a class="socmed-link" href="#">
-                  <img src="logo/instagram.svg" alt="instagram logo" />
-                </a>
-                <a class="socmed-link" href="#">
-                  <img src="logo/twitter.svg" alt="twitter logo" />
-                </a>
-                <a class="socmed-link" href="#">
-                  <img src="logo/line.svg" alt="line logo" />
-                </a>
-                <a class="socmed-link" href="#">
-                  <img src="logo/facebook.svg" alt="facebook logo" />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="team-slide">
-            <div class="team-card">
-              <img src="image/test.png" class="profile-img" alt="person profile" />
-              <div class="profile-description">
-                <h3 class="name-card">media partner</h3>
-                <h4 class="person-name">Aldi Suradi Brina</h4>
-              </div>
-              <div class="team-socmed">
-                <a class="socmed-link" href="#">
-                  <img src="logo/instagram.svg" alt="instagram logo" />
-                </a>
-                <a class="socmed-link" href="#">
-                  <img src="logo/twitter.svg" alt="twitter logo" />
-                </a>
-                <a class="socmed-link" href="#">
-                  <img src="logo/line.svg" alt="line logo" />
-                </a>
-                <a class="socmed-link" href="#">
-                  <img src="logo/facebook.svg" alt="facebook logo" />
-                </a>
-              </div>
-            </div>
-            <div class="team-card">
-              <img src="image/test.png" class="profile-img" alt="person profile" />
-              <div class="profile-description">
-                <h3 class="name-card">secretary</h3>
-                <h4 class="person-name">Aldi Suradi Brina</h4>
-              </div>
-              <div class="team-socmed">
-                <a class="socmed-link" href="#">
-                  <img src="logo/instagram.svg" alt="instagram logo" />
-                </a>
-                <a class="socmed-link" href="#">
-                  <img src="logo/twitter.svg" alt="twitter logo" />
-                </a>
-                <a class="socmed-link" href="#">
-                  <img src="logo/line.svg" alt="line logo" />
-                </a>
-                <a class="socmed-link" href="#">
-                  <img src="logo/facebook.svg" alt="facebook logo" />
-                </a>
-              </div>
-            </div>
-            <div class="team-card">
-              <img src="image/test.png" class="profile-img" alt="person profile" />
-
-              <div class="profile-description">
-                <h3 class="name-card">treasurer</h3>
-                <h4 class="person-name">Aldi Suradi Brina</h4>
-              </div>
-              <div class="team-socmed">
-                <a class="socmed-link" href="#">
-                  <img src="logo/instagram.svg" alt="instagram logo" />
-                </a>
-                <a class="socmed-link" href="#">
-                  <img src="logo/twitter.svg" alt="twitter logo" />
-                </a>
-                <a class="socmed-link" href="#">
-                  <img src="logo/line.svg" alt="line logo" />
-                </a>
-                <a class="socmed-link" href="#">
-                  <img src="logo/facebook.svg" alt="facebook logo" />
-                </a>
-              </div>
-            </div>
-            <div class="team-card">
-              <img src="image/test.png" class="profile-img" alt="person profile" />
-
-              <div class="profile-description">
-                <h3 class="name-card">public relations</h3>
-                <h4 class="person-name">Aldi Suradi Brina</h4>
-              </div>
-              <div class="team-socmed">
+              <div class="socmed-container">
                 <a class="socmed-link" href="#">
                   <img src="logo/instagram.svg" alt="instagram logo" />
                 </a>
@@ -182,14 +102,14 @@
               </div>
             </div>
           </div>
-          <div class="team-slide">
-            <div class="team-card">
-              <img src="image/test.png" class="profile-img" alt="person profile" />
-              <div class="profile-description">
-                <h3 class="name-card">android instructor</h3>
-                <h4 class="person-name">Aldi Suradi Brina</h4>
+          <div class="slide">
+            <div class="card">
+              <img src="image/test.png" class="profile-picture" alt="person profile" />
+              <div class="name_and_role">
+                <h3 class="role">media partner</h3>
+                <h4 class="name">Aldi Suradi Brina</h4>
               </div>
-              <div class="team-socmed">
+              <div class="socmed-container">
                 <a class="socmed-link" href="#">
                   <img src="logo/instagram.svg" alt="instagram logo" />
                 </a>
@@ -204,13 +124,13 @@
                 </a>
               </div>
             </div>
-            <div class="team-card">
-              <img src="image/test.png" class="profile-img" alt="person profile" />
-              <div class="profile-description">
-                <h3 class="name-card">website instructor</h3>
-                <h4 class="person-name">Aldi Suradi Brina</h4>
+            <div class="card">
+              <img src="image/test.png" class="profile-picture" alt="person profile" />
+              <div class="name_and_role">
+                <h3 class="role">secretary</h3>
+                <h4 class="name">Aldi Suradi Brina</h4>
               </div>
-              <div class="team-socmed">
+              <div class="socmed-container">
                 <a class="socmed-link" href="#">
                   <img src="logo/instagram.svg" alt="instagram logo" />
                 </a>
@@ -225,14 +145,102 @@
                 </a>
               </div>
             </div>
-            <div class="team-card">
-              <img src="image/test.png" class="profile-img" alt="person profile" />
+            <div class="card">
+              <img src="image/test.png" class="profile-picture" alt="person profile" />
 
-              <div class="profile-description">
-                <h3 class="name-card">motion graphic instructor</h3>
-                <h4 class="person-name">Aldi Suradi Brina</h4>
+              <div class="name_and_role">
+                <h3 class="role">treasurer</h3>
+                <h4 class="name">Aldi Suradi Brina</h4>
               </div>
-              <div class="team-socmed">
+              <div class="socmed-container">
+                <a class="socmed-link" href="#">
+                  <img src="logo/instagram.svg" alt="instagram logo" />
+                </a>
+                <a class="socmed-link" href="#">
+                  <img src="logo/twitter.svg" alt="twitter logo" />
+                </a>
+                <a class="socmed-link" href="#">
+                  <img src="logo/line.svg" alt="line logo" />
+                </a>
+                <a class="socmed-link" href="#">
+                  <img src="logo/facebook.svg" alt="facebook logo" />
+                </a>
+              </div>
+            </div>
+            <div class="card">
+              <img src="image/test.png" class="profile-picture" alt="person profile" />
+
+              <div class="name_and_role">
+                <h3 class="role">public relations</h3>
+                <h4 class="name">Aldi Suradi Brina</h4>
+              </div>
+              <div class="socmed-container">
+                <a class="socmed-link" href="#">
+                  <img src="logo/instagram.svg" alt="instagram logo" />
+                </a>
+                <a class="socmed-link" href="#">
+                  <img src="logo/twitter.svg" alt="twitter logo" />
+                </a>
+                <a class="socmed-link" href="#">
+                  <img src="logo/line.svg" alt="line logo" />
+                </a>
+                <a class="socmed-link" href="#">
+                  <img src="logo/facebook.svg" alt="facebook logo" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="card">
+              <img src="image/test.png" class="profile-picture" alt="person profile" />
+              <div class="name_and_role">
+                <h3 class="role">android instructor</h3>
+                <h4 class="name">Aldi Suradi Brina</h4>
+              </div>
+              <div class="socmed-container">
+                <a class="socmed-link" href="#">
+                  <img src="logo/instagram.svg" alt="instagram logo" />
+                </a>
+                <a class="socmed-link" href="#">
+                  <img src="logo/twitter.svg" alt="twitter logo" />
+                </a>
+                <a class="socmed-link" href="#">
+                  <img src="logo/line.svg" alt="line logo" />
+                </a>
+                <a class="socmed-link" href="#">
+                  <img src="logo/facebook.svg" alt="facebook logo" />
+                </a>
+              </div>
+            </div>
+            <div class="card">
+              <img src="image/test.png" class="profile-picture" alt="person profile" />
+              <div class="name_and_role">
+                <h3 class="role">website instructor</h3>
+                <h4 class="name">Aldi Suradi Brina</h4>
+              </div>
+              <div class="socmed-container">
+                <a class="socmed-link" href="#">
+                  <img src="logo/instagram.svg" alt="instagram logo" />
+                </a>
+                <a class="socmed-link" href="#">
+                  <img src="logo/twitter.svg" alt="twitter logo" />
+                </a>
+                <a class="socmed-link" href="#">
+                  <img src="logo/line.svg" alt="line logo" />
+                </a>
+                <a class="socmed-link" href="#">
+                  <img src="logo/facebook.svg" alt="facebook logo" />
+                </a>
+              </div>
+            </div>
+            <div class="card">
+              <img src="image/test.png" class="profile-picture" alt="person profile" />
+
+              <div class="name_and_role">
+                <h3 class="role">motion graphic instructor</h3>
+                <h4 class="name">Aldi Suradi Brina</h4>
+              </div>
+              <div class="socmed-container">
                 <a class="socmed-link" href="#">
                   <img src="logo/instagram.svg" alt="instagram logo" />
                 </a>

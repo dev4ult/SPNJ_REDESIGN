@@ -1,0 +1,59 @@
+@use '../root/font-size' as fs;
+@use '../root/general';
+
+.hero-section {
+  background-color: var(--background-color-accent);
+  text-align: center;
+  position: relative;
+  z-index: -2;
+  display: flex;
+  height: 60vh;
+
+  .container {
+    align-self: center;
+  }
+
+  .title {
+    color: var(--title-color);
+    font-size: fs.$extra-large;
+    margin-inline: auto;
+  }
+}
+
+.motto {
+  margin-top: 1em;
+  font-weight: 600;
+  color: var(--title-color);
+  width: 60%;
+  margin: 1.2em auto 0;
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: fs.$medium;
+}
+
+.sahabat,
+.pnj {
+  display: block;
+  width: fit-content;
+  margin-inline: auto;
+  background-color: var(--hero-title-background);
+  padding-inline: 0.2em;
+  position: relative;
+}
+
+.pnj {
+  color: var(--pnj-span-color);
+  margin-top: 0.15em;
+}
+
+.sahabat::before,
+.pnj::before {
+  position: absolute;
+  content: '';
+  top: 5px;
+  bottom: -5px;
+  right: 5px;
+  left: -5px;
+  background-color: var(--hero-title-background-before);
+  z-index: -1;
+}

@@ -1,0 +1,14 @@
+@use '../root/general';
+
+.about-section {
+  display: flex;
+  height: clamp(30vh, 47vw, 40vh);
+
+  .about-container {
+    align-self: center;
+
+    .paragraph {
+      line-height: 1.5;
+    }
+  }
+}

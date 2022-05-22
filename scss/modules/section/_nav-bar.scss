@@ -1,0 +1,50 @@
+.nav {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  right: 2vw;
+  top: 10px;
+  padding: 0.3em 0.7em;
+  border-radius: 100px;
+  background-color: var(--background-color);
+  z-index: 2;
+  opacity: 0.8;
+}
+
+.nav:hover {
+  opacity: 1;
+}
+
+.nav-list {
+  display: none;
+  transition: 300ms ease;
+}
+
+.nav-item {
+  margin-inline: 0.5em;
+  display: flex;
+  list-style: none;
+  background-color: var(--link-background);
+  padding: 0.3em 0.5em;
+  border-radius: 50px;
+}
+
+.nav-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: bold;
+  align-self: center;
+  color: var(--link-color);
+}
+
+.nav-theme,
+.nav-toggle {
+  display: flex;
+  transform: rotate(180deg);
+  transition: 300ms ease;
+}
+
+.nav-theme {
+  margin-left: 0.5em;
+}
