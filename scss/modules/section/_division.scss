@@ -13,6 +13,7 @@
   background-color: var(--link-background);
   padding-block: 0.2em;
   z-index: 2;
+  transition: 300ms ease;
 
   .arrow-back {
     display: none;
@@ -44,6 +45,8 @@
 }
 
 .division-section {
+  padding-block: 1em;
+
   .container {
     overflow-x: hidden;
     width: 100%;
@@ -145,6 +148,14 @@
   display: flex;
   overflow: hidden;
   margin-top: 1em;
+}
+
+.project-item:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--link-background);
 }
 
 .project-text-content {
