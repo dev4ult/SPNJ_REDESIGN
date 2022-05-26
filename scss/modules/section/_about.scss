@@ -4,11 +4,17 @@
   display: flex;
   height: clamp(30vh, 47vw, 40vh);
 
-  .about-container {
+  .container {
     align-self: center;
 
     .paragraph {
       line-height: 1.5;
     }
+  }
+}
+
+@media (max-width: 320px) {
+  .about-section {
+    height: calc(75vh - 110vw);
   }
 }

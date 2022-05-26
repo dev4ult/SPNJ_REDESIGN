@@ -17,12 +17,16 @@
   .container::-webkit-scrollbar {
     display: none;
   }
-}
 
-.slide {
-  display: flex;
-  position: relative;
-  z-index: 0;
+  .slide {
+    display: flex;
+    position: relative;
+    z-index: 0;
+  }
+
+  .slide + .slide {
+    margin-left: 4vw;
+  }
 }
 
 .card + .card {
@@ -94,10 +98,6 @@
     margin-top: 0.7em;
     margin-bottom: 0.2em;
   }
-}
-
-.slide + .slide {
-  margin-left: 4vw;
 }
 
 .slide:first-child {

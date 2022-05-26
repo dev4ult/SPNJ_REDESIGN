@@ -66,6 +66,10 @@
   transition: 300ms ease;
 }
 
+.nav-toggle {
+  margin-inline: 0.4em;
+}
+
 .nav-theme {
   margin-left: 0.5em;
 }
@@ -99,16 +103,18 @@ img {
   position: relative;
 }
 
-.section-title {
+.title {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
-  font-size: clamp(1.5rem, 7vw, 2rem);
+  font-size: clamp(1.5rem, 5vw, 2rem);
   padding: 0.1em 0.3em;
   color: var(--title-color);
   background-color: var(--title-background);
   position: relative;
 }
 
-.section-title::before {
+.title::before {
   position: absolute;
   content: "";
   top: 4px;
@@ -136,11 +142,6 @@ h3 {
   text-transform: uppercase;
 }
 
-@media (max-width: 320px) {
-  .about-section {
-    height: calc(75vh - 110vw);
-  }
-}
 .hero-section {
   background-color: var(--background-color-accent);
   text-align: center;
@@ -157,6 +158,10 @@ h3 {
   font-size: clamp(2.5rem, 10vw, 4rem);
   margin-inline: auto;
 }
+.hero-section .title,
+.hero-section .title::before {
+  background-color: transparent;
+}
 
 .motto {
   margin-top: 1em;
@@ -166,12 +171,14 @@ h3 {
   margin: 1.2em auto 0;
   text-transform: uppercase;
   font-style: italic;
-  font-size: clamp(1.3rem, 5vw, 1.7rem);
+  font-size: clamp(1.3rem, 3vw, 1.7rem);
 }
 
 .sahabat,
 .pnj {
   display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   margin-inline: auto;
   background-color: var(--hero-title-background);
@@ -200,13 +207,18 @@ h3 {
   display: flex;
   height: clamp(30vh, 47vw, 40vh);
 }
-.about-section .about-container {
+.about-section .container {
   align-self: center;
 }
-.about-section .about-container .paragraph {
+.about-section .container .paragraph {
   line-height: 1.5;
 }
 
+@media (max-width: 320px) {
+  .about-section {
+    height: calc(75vh - 110vw);
+  }
+}
 .organizer-section {
   height: 105vw;
   max-height: 576px;
@@ -222,11 +234,13 @@ h3 {
 .organizer-section .container::-webkit-scrollbar {
   display: none;
 }
-
-.slide {
+.organizer-section .slide {
   display: flex;
   position: relative;
   z-index: 0;
+}
+.organizer-section .slide + .slide {
+  margin-left: 4vw;
 }
 
 .card + .card {
@@ -253,7 +267,8 @@ h3 {
 .card .profile-picture {
   width: 90%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 10px;
   filter: brightness(0.7);
 }
@@ -268,12 +283,14 @@ h3 {
 }
 
 .role {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   max-width: 60%;
   color: var(--text-color-in-dark-bg);
   font-weight: 600;
   letter-spacing: 1.5px;
-  font-size: clamp(1.3rem, 5vw, 1.7rem);
+  font-size: clamp(1.3rem, 3vw, 1.7rem);
 }
 
 .name {
@@ -282,6 +299,8 @@ h3 {
   padding: 0.3em 0.5em;
   border-radius: 5px;
   margin-top: 0.4em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   position: relative;
   font-weight: 600;
@@ -298,10 +317,6 @@ h3 {
   margin-bottom: 0.2em;
 }
 
-.slide + .slide {
-  margin-left: 4vw;
-}
-
 .slide:first-child .card:first-child {
   margin-left: 10vw;
 }
@@ -312,80 +327,26 @@ h3 {
 
 .division-section {
   height: auto;
+  overflow: hidden;
 }
-.division-section .division-selection {
-  display: flex;
-  margin-top: 1.5em;
-  margin-left: 0.8em;
-  width: fit-content;
-  border-radius: 50px;
-  background-color: var(--link-background);
-  align-items: center;
-  padding-block: 0.1em;
-}
-.division-section .division-selection .back {
-  display: none;
-  transform: rotate(180deg);
-}
-.division-section .division-selection .forward {
-  display: flex;
-  top: -1px;
-  position: relative;
-}
-.division-section .division-selection .option-container {
-  align-items: center;
-  position: relative;
-}
-.division-section .division-selection .option-container .option {
-  list-style: none;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: var(--link-color);
-  font-size: clamp(1rem, 4vw, 1.5rem);
-}
-.division-section .division-selection .option-container .option + .option {
-  display: none;
-}
-.division-section .division-selection .option-container .option:first-child {
-  margin-left: 0.6em;
-}
-.division-section .division-selection .option-container .option:last-child {
-  margin-right: 0.6em;
-}
-.division-section .division-container {
+.division-section .container {
+  width: 300%;
   display: flex;
   overflow: hidden;
-  width: 95vw;
-  padding: 1.5em 0.3em;
 }
-.division-section .division-container .division-slide + .division-slide {
-  margin-left: 1rem;
-}
-.division-section .division-container .division-slide {
-  position: relative;
+.division-section .slide {
   transition: 300ms ease;
-  margin-inline: auto;
+  padding-inline: 1.5em;
 }
-.division-section .division-container .division-slide .slide-content {
-  width: 95vw;
-  background-color: red;
-}
-.division-section .division-container .division-slide .slide-content .instructor-name {
-  font-size: clamp(1.3rem, 5vw, 1.7rem);
-}
-.division-section .division-container .division-slide .slide-content .short-review {
-  color: var(--section-desc-color);
-  margin-top: 1em;
-  font-weight: 600;
-  width: 95%;
-}
-.division-section .division-container .division-slide .slide-content .subject-lesson {
+.division-section .overview-sub-section .subject-list {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
 }
-.division-section .division-container .division-slide .slide-content .subject-lesson .subject {
+.division-section .overview-sub-section .subject-list .subject {
   text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   font-size: 1.3rem;
   font-weight: bolder;
@@ -395,10 +356,10 @@ h3 {
   padding: 0.5em;
   border-radius: 10px;
 }
-.division-section .division-container .division-slide .slide-content + .slide-content {
+.division-section .senior-sub-section {
   margin-top: 3em;
 }
-.division-section .division-container .division-slide .slide-content:nth-child(2) .section-content {
+.division-section .senior-sub-section .profile-box {
   background-color: var(--section-shadow);
   width: clamp(230px, 94%, 400px);
   margin-top: 2em;
@@ -406,44 +367,49 @@ h3 {
   padding: 1em;
   border-radius: 20px;
 }
-.division-section .division-container .division-slide .slide-content:nth-child(2) .section-content .instructor-profile {
+.division-section .senior-sub-section .profile-picture {
   width: 200px;
   height: 200px;
   border-radius: 50%;
   margin-bottom: 1em;
 }
-.division-section .division-container .division-slide .slide-content:nth-child(2) .section-content .instructor-name {
+.division-section .senior-sub-section .name {
   text-transform: none;
+  color: var(--section-desc-color);
+  margin-top: 1em;
+  font-weight: 600;
+  width: 95%;
 }
-.division-section .division-container .division-slide .projects {
-  width: 100%;
+.division-section .projects {
+  margin-top: 3em;
 }
-.division-section .division-container .division-slide .projects .project-container {
+.division-section .projects .project-container {
   margin-top: 1em;
 }
-.division-section .division-container .division-slide .projects .project-container .project + .project {
+.division-section .projects .project-container .project + .project {
   margin-top: 1em;
 }
-.division-section .division-container .division-slide .projects .project-container .project:last-child {
+.division-section .projects .project-container .project:last-child {
   display: flex;
   background-color: var(--link-background);
 }
-.division-section .division-container .division-slide .projects .project-container .project:last-child .project-name {
+.division-section .projects .project-container .project:last-child .project-name {
   margin: auto;
   color: var(--link-color);
-  font-size: clamp(1.3rem, 5vw, 1.7rem);
+  font-size: clamp(1.3rem, 3vw, 1.7rem);
 }
-.division-section .division-container .division-slide .projects .project-container .project {
+.division-section .projects .project-container .project {
   position: relative;
   min-height: 200px;
   display: flex;
   overflow: hidden;
 }
-.division-section .division-container .division-slide .projects .project-container .project .project-img {
-  object-fit: cover;
+.division-section .projects .project-container .project .project-img {
+  -o-object-fit: cover;
+     object-fit: cover;
   filter: brightness(0.6);
 }
-.division-section .division-container .division-slide .projects .project-container .project .project-text-content {
+.division-section .projects .project-container .project .project-text-content {
   position: absolute;
   z-index: 1;
   bottom: 10px;
@@ -451,22 +417,26 @@ h3 {
   padding-inline: 0.7em 0.5em;
   width: 100%;
 }
-.division-section .division-container .division-slide .projects .project-container .project .project-text-content .project-name {
+.division-section .projects .project-container .project .project-text-content .project-name {
   color: var(--text-color-in-dark-bg);
   background-size: 100% 2px;
   background-repeat: no-repeat;
   background-position: left bottom;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   letter-spacing: 1px;
-  font-size: clamp(1.3rem, 5vw, 1.7rem);
+  font-size: clamp(1.3rem, 3vw, 1.7rem);
 }
-.division-section .division-container .division-slide .projects .project-container .project .project-text-content .project-owner {
+.division-section .projects .project-container .project .project-text-content .project-owner {
   font-size: clamp(1rem, 4vw, 1.5rem);
   text-align: center;
   margin-block: 0.5em 0.2em;
   color: var(--title-color);
   background-color: var(--hero-title-background);
   padding: 0.3em 0.5em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   max-width: 50%;
   border-radius: 5px;
@@ -474,7 +444,7 @@ h3 {
   text-transform: none;
   font-family: "Montserrat", sans-serif;
 }
-.division-section .division-container .division-slide .projects .project-container .project .project-text-content .detail-button {
+.division-section .projects .project-container .project .project-text-content .detail-button {
   font-size: clamp(1rem, 4vw, 1.5rem);
   position: absolute;
   text-decoration: none;
@@ -487,12 +457,52 @@ h3 {
   right: 9px;
   bottom: 0;
 }
-.division-section .division-container .division-slide .projects .project-container .project-span-col-2 {
+.division-section .projects .project-container .project-span-col-2 {
   grid-column: span 2;
 }
-.division-section .division-container .division-slide .projects .project-container .project-span-row-2 {
+.division-section .projects .project-container .project-span-row-2 {
   grid-column-start: 2;
   grid-row: 1/span 2;
+}
+
+.division-navigation {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 15px;
+  display: flex;
+  align-items: center;
+  margin-block: 1.5em;
+  margin-left: 4vw;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 50px;
+  background-color: var(--link-background);
+  padding-block: 0.2em;
+  z-index: 1;
+}
+.division-navigation .arrow-back {
+  display: none;
+  margin-left: 0.8em;
+}
+.division-navigation .arrow-forward {
+  display: flex;
+  align-self: center;
+  margin-right: 0.8em;
+}
+.division-navigation .options {
+  margin-inline: 0.8em;
+  position: relative;
+}
+.division-navigation .options .option {
+  list-style: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--link-color);
+  font-size: clamp(1rem, 4vw, 1.5rem);
+}
+.division-navigation .options .option + .option {
+  display: none;
 }
 
 .registration-gate-section {
@@ -517,7 +527,7 @@ h3 {
   display: flex;
   align-items: center;
   width: clamp(200px, 75%, 300px);
-  font-size: clamp(1.5rem, 7vw, 2rem);
+  font-size: clamp(1.5rem, 5vw, 2rem);
 }
 .registration-gate-section .registration-gate-container .registration-gate-link::before {
   position: absolute;
@@ -587,6 +597,18 @@ h3 {
   color: var(--section-desc-color);
   border-radius: 50px;
 }
+.contact-socmed .form-container .form-data input:not(:-moz-placeholder-shown):not(:focus) ~ label, .contact-socmed .form-container .form-data textarea:not(:-moz-placeholder-shown):not(:focus) ~ label {
+  -moz-transition: 200ms ease;
+  transition: 200ms ease;
+  font-size: clamp(0.7rem, 3vw, 1.2rem);
+  transform: translateY(20%);
+}
+.contact-socmed .form-container .form-data input:not(:-ms-input-placeholder):not(:focus) ~ label, .contact-socmed .form-container .form-data textarea:not(:-ms-input-placeholder):not(:focus) ~ label {
+  -ms-transition: 200ms ease;
+  transition: 200ms ease;
+  font-size: clamp(0.7rem, 3vw, 1.2rem);
+  transform: translateY(20%);
+}
 .contact-socmed .form-container .form-data input:focus ~ label,
 .contact-socmed .form-container .form-data input:not(:placeholder-shown):not(:focus) ~ label,
 .contact-socmed .form-container .form-data textarea:not(:placeholder-shown):not(:focus) ~ label,
@@ -603,6 +625,4 @@ h3 {
 }
 .contact-socmed .socmed .socmed-container .socmed-link img {
   width: 50px;
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

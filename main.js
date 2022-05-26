@@ -12,10 +12,10 @@ navToggle.addEventListener('click', () => {
   }
 });
 
-const arrowGoBack = document.querySelector('.back');
-const arrowGoForward = document.querySelector('.forward');
+const arrowGoBack = document.querySelector('.arrow-back');
+const arrowGoForward = document.querySelector('.arrow-forward');
 const options = document.getElementsByClassName('option');
-const divisionSlide = document.querySelectorAll('.division-slide');
+const divisionSlide = document.querySelectorAll('.division-section .slide');
 
 let option = 0;
 
@@ -32,21 +32,21 @@ arrowGoForward.addEventListener('click', () => {
 function optionBehaviour() {
   if (option == 0) {
     arrowGoBack.style.display = 'none';
-    options[option].style.display = 'block';
+    options[option].style.display = 'flex';
     options[option + 1].style.display = 'none';
-    Array.from(divisionSlide).forEach((slide) => (slide.style.transform = `translateX(calc(98vw * ${option}))`));
+    Array.from(divisionSlide).forEach((slide) => (slide.style.transform = `translateX(calc(100vw * ${option}))`));
   } else if (option == 1) {
     arrowGoBack.style.display = 'flex';
     arrowGoForward.style.display = 'flex';
     options[option - 1].style.display = 'none';
-    options[option].style.display = 'block';
+    options[option].style.display = 'flex';
     options[option + 1].style.display = 'none';
-    Array.from(divisionSlide).forEach((slide) => (slide.style.transform = `translateX(calc(-98vw * ${option}))`));
+    Array.from(divisionSlide).forEach((slide) => (slide.style.transform = `translateX(calc(-100vw * ${option}))`));
   } else {
     arrowGoForward.style.display = 'none';
     options[option - 1].style.display = 'none';
-    options[option].style.display = 'block';
-    Array.from(divisionSlide).forEach((slide) => (slide.style.transform = `translateX(calc(-98vw * ${option}))`));
+    options[option].style.display = 'flex';
+    Array.from(divisionSlide).forEach((slide) => (slide.style.transform = `translateX(calc(-100vw * ${option}))`));
   }
 }
 

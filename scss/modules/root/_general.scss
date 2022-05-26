@@ -30,7 +30,7 @@ img {
   position: relative;
 }
 
-.section-title {
+.title {
   width: fit-content;
   font-size: fs.$large;
   padding: 0.1em 0.3em;
@@ -39,7 +39,7 @@ img {
   position: relative;
 }
 
-.section-title::before {
+.title::before {
   position: absolute;
   content: '';
   top: 4px;
@@ -66,10 +66,4 @@ h2,
 h3 {
   font-family: 'HELVETICA';
   text-transform: uppercase;
-}
-
-@media (max-width: 320px) {
-  .about-section {
-    height: calc(75vh - 110vw);
-  }
 }

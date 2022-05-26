@@ -18,6 +18,11 @@
     font-size: fs.$extra-large;
     margin-inline: auto;
   }
+
+  .title,
+  .title::before {
+    background-color: transparent;
+  }
 }
 
 .motto {
