@@ -1,169 +1,6 @@
 @use '../root/general';
 @use '../root/font-size' as fs;
 
-.division-section {
-  height: auto;
-
-  .overflowing-container {
-    overflow-x: hidden;
-  }
-
-  .container {
-    width: 300%;
-    display: flex;
-  }
-
-  .slide {
-    transition: 300ms ease;
-    padding-inline: 1.5em;
-  }
-
-  .overview-sub-section {
-    .subject-list {
-      display: flex;
-      justify-content: flex-start;
-      flex-wrap: wrap;
-
-      .subject {
-        text-align: center;
-        width: fit-content;
-        font-size: 1.3rem;
-        font-weight: bolder;
-        background-color: var(--section-shadow);
-        margin-right: 1em;
-        margin-top: 1em;
-        padding: 0.5em;
-        border-radius: 10px;
-      }
-    }
-  }
-
-  .senior-sub-section {
-    margin-top: 3em;
-
-    .profile-box {
-      background-color: var(--section-shadow);
-      width: clamp(230px, 94%, 400px);
-      margin-top: 2em;
-      text-align: center;
-      padding: 1em;
-      border-radius: 20px;
-    }
-
-    .profile-picture {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      margin-bottom: 1em;
-    }
-
-    .name {
-      text-transform: none;
-      color: var(--section-desc-color);
-      margin-top: 1em;
-      font-weight: 600;
-      width: 95%;
-    }
-  }
-
-  .projects {
-    margin-top: 3em;
-
-    .project-container {
-      margin-top: 1em;
-      // display: grid;
-      // grid-template-columns: repeat(2, 1fr);
-      // gap: 6px;
-
-      .project + .project {
-        margin-top: 1em;
-      }
-
-      .project:last-child {
-        display: flex;
-        background-color: var(--link-background);
-
-        .project-name {
-          margin: auto;
-          color: var(--link-color);
-          font-size: fs.$medium;
-        }
-      }
-
-      .project {
-        position: relative;
-        min-height: 200px;
-        display: flex;
-        overflow: hidden;
-
-        .project-img {
-          object-fit: cover;
-          filter: brightness(0.6);
-        }
-
-        .project-text-content {
-          position: absolute;
-          z-index: 1;
-          bottom: 10px;
-          text-align: left;
-          padding-inline: 0.7em 0.5em;
-          width: 100%;
-
-          .project-name {
-            color: var(--text-color-in-dark-bg);
-            background-size: 100% 2px;
-            background-repeat: no-repeat;
-            background-position: left bottom;
-            width: fit-content;
-            letter-spacing: 1px;
-            font-size: fs.$medium;
-          }
-
-          .project-owner {
-            font-size: fs.$small;
-
-            text-align: center;
-            margin-block: 0.5em 0.2em;
-            color: var(--title-color);
-            background-color: var(--hero-title-background);
-            padding: 0.3em 0.5em;
-            width: fit-content;
-            max-width: 50%;
-            border-radius: 5px;
-            position: relative;
-            text-transform: none;
-            font-family: 'Montserrat', sans-serif;
-          }
-
-          .detail-button {
-            font-size: fs.$small;
-
-            position: absolute;
-            text-decoration: none;
-            background-color: var(--card-button-background);
-            color: var(--text-color-in-dark-bg);
-            padding: 0.3em 0.7em;
-            border-radius: 5px;
-            font-weight: 600;
-            border-radius: 20px;
-            right: 9px;
-            bottom: 0;
-          }
-        }
-      }
-
-      .project-span-col-2 {
-        grid-column: span 2;
-      }
-
-      .project-span-row-2 {
-        grid-column-start: 2;
-        grid-row: 1 / span 2;
-      }
-    }
-  }
-}
-
 .division-navigation {
   position: sticky;
   top: 16px;
@@ -175,7 +12,7 @@
   border-radius: 50px;
   background-color: var(--link-background);
   padding-block: 0.2em;
-  z-index: 1;
+  z-index: 2;
 
   .arrow-back {
     display: none;
@@ -203,5 +40,136 @@
     .option + .option {
       display: none;
     }
+  }
+}
+
+.division-section {
+  .container {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  .overflowing-container {
+    width: 300%;
+    display: flex;
+  }
+
+  .slide {
+    transition: 300ms ease;
+    padding-inline: 1.5em;
+  }
+}
+
+.overview-sub-section {
+  .subject-list {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    .subject {
+      text-align: center;
+      width: fit-content;
+      font-size: 1.3rem;
+      font-weight: bolder;
+      background-color: var(--section-shadow);
+      margin-right: 1em;
+      margin-top: 1em;
+      padding: 0.5em;
+      border-radius: 10px;
+    }
+  }
+}
+
+.senior-sub-section {
+  margin-top: 3em;
+
+  .profile-box {
+    background-color: var(--section-shadow);
+    width: clamp(230px, 94%, 400px);
+    margin-top: 2em;
+    text-align: center;
+    padding: 1em;
+    border-radius: 20px;
+  }
+
+  .profile-picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 1em;
+  }
+
+  .name {
+    text-transform: none;
+    color: var(--section-desc-color);
+    margin-top: 1em;
+    font-weight: 600;
+    width: 95%;
+  }
+}
+
+.project-sub-section {
+  margin-top: 3em;
+
+  .grid-container {
+    margin-top: 1em;
+    // grid-template-columns: repeat(2, 1fr);
+    // gap: 6px;
+
+    .grid-item-span-col-2 {
+      grid-column: span 2;
+    }
+
+    .grid-item-span-row-2 {
+      grid-column-start: 2;
+      grid-row: 1 / span 2;
+    }
+  }
+}
+
+.project-img {
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.project-name {
+  color: var(--text-color-in-dark-bg);
+  width: fit-content;
+  letter-spacing: 1px;
+  font-size: fs.$medium;
+}
+
+.project-item {
+  position: relative;
+  min-height: 200px;
+  display: flex;
+  overflow: hidden;
+  margin-top: 1em;
+}
+
+.project-text-content {
+  position: absolute;
+  z-index: 1;
+  bottom: 10px;
+  text-align: left;
+  padding-inline: 0.7em 0.5em;
+  width: 100%;
+
+  .name {
+    max-width: 55%;
+  }
+
+  .detail-button {
+    font-size: fs.$small;
+    position: absolute;
+    text-decoration: none;
+    background-color: var(--card-button-background);
+    color: var(--text-color-in-dark-bg);
+    padding: 0.3em 0.7em;
+    border-radius: 5px;
+    font-weight: 600;
+    border-radius: 20px;
+    right: 9px;
+    bottom: 0;
   }
 }

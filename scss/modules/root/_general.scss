@@ -14,12 +14,6 @@ body {
   background-color: var(--background-color);
 }
 
-header,
-section,
-footer {
-  height: 100vh;
-}
-
 img {
   max-width: 100%;
 }
@@ -56,6 +50,19 @@ img {
   font-weight: 600;
   font-size: fs.$small;
   line-height: 1.5;
+}
+
+.name {
+  background-color: var(--hero-title-background);
+  color: var(--title-color);
+  padding: 0.3em 0.5em;
+  border-radius: 5px;
+  margin-top: 0.4em;
+  width: fit-content;
+  position: relative;
+  font-weight: 600;
+  font-size: fs.$small;
+  text-align: center;
 }
 
 /* ======================

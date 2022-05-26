@@ -78,18 +78,6 @@
   font-size: fs.$medium;
 }
 
-.name {
-  background-color: var(--hero-title-background);
-  color: var(--title-color);
-  padding: 0.3em 0.5em;
-  border-radius: 5px;
-  margin-top: 0.4em;
-  width: fit-content;
-  position: relative;
-  font-weight: 600;
-  font-size: fs.$small;
-}
-
 .socmed-link {
   display: flex;
   flex-direction: column;
