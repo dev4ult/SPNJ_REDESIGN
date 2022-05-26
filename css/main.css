@@ -130,6 +130,7 @@ img {
   color: var(--section-desc-color);
   font-weight: 600;
   font-size: clamp(1rem, 4vw, 1.5rem);
+  line-height: 1.5;
 }
 
 /* ======================
@@ -209,9 +210,6 @@ h3 {
 }
 .about-section .container {
   align-self: center;
-}
-.about-section .container .paragraph {
-  line-height: 1.5;
 }
 
 @media (max-width: 320px) {
@@ -327,12 +325,13 @@ h3 {
 
 .division-section {
   height: auto;
-  overflow: hidden;
+}
+.division-section .overflowing-container {
+  overflow-x: hidden;
 }
 .division-section .container {
   width: 300%;
   display: flex;
-  overflow: hidden;
 }
 .division-section .slide {
   transition: 300ms ease;
@@ -468,7 +467,7 @@ h3 {
 .division-navigation {
   position: -webkit-sticky;
   position: sticky;
-  top: 15px;
+  top: 16px;
   display: flex;
   align-items: center;
   margin-block: 1.5em;

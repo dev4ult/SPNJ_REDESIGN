@@ -3,12 +3,14 @@
 
 .division-section {
   height: auto;
-  overflow: hidden;
+
+  .overflowing-container {
+    overflow-x: hidden;
+  }
 
   .container {
     width: 300%;
     display: flex;
-    overflow: hidden;
   }
 
   .slide {
@@ -164,7 +166,7 @@
 
 .division-navigation {
   position: sticky;
-  top: 15px;
+  top: 16px;
   display: flex;
   align-items: center;
   margin-block: 1.5em;
