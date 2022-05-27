@@ -16,7 +16,7 @@
   --link-background-before: #42c2ff;
   --card-background: #2999b0;
   --card-title-background: #12efd9;
-  --card-button-background: rgba(117, 117, 117, 0.3);
+  --card-name-background: rgba(117, 117, 117, 0.3);
 }
 
 .nav {
@@ -128,8 +128,8 @@ img {
 }
 
 .name {
-  background-color: var(--hero-title-background);
-  color: var(--title-color);
+  background-color: var(--card-name-background);
+  color: var(--text-color-in-dark-bg);
   padding: 0.3em 0.5em;
   border-radius: 5px;
   margin-top: 0.4em;
@@ -182,7 +182,7 @@ h3 {
   margin: 1.2em auto 0;
   text-transform: uppercase;
   font-style: italic;
-  font-size: clamp(1.3rem, 3vw, 1.7rem);
+  font-size: clamp(1.3rem, 3.5vw, 1.7rem);
 }
 
 .sahabat,
@@ -298,7 +298,7 @@ h3 {
   color: var(--text-color-in-dark-bg);
   font-weight: 600;
   letter-spacing: 1.5px;
-  font-size: clamp(1.3rem, 3vw, 1.7rem);
+  font-size: clamp(1.3rem, 3.5vw, 1.7rem);
 }
 
 .socmed-link {
@@ -331,10 +331,10 @@ h3 {
   width: -moz-fit-content;
   width: fit-content;
   border-radius: 50px;
-  background-color: var(--link-background);
+  background-color: var(--link-color);
   padding-block: 0.2em;
   z-index: 2;
-  transition: 300ms ease;
+  transition: 200ms ease;
 }
 .division-navigation .arrow-back {
   display: none;
@@ -353,7 +353,7 @@ h3 {
   list-style: none;
   text-transform: uppercase;
   font-weight: bold;
-  color: var(--link-color);
+  color: var(--link-background);
   font-size: clamp(1rem, 4vw, 1.5rem);
 }
 .division-navigation .options .option + .option {
@@ -374,6 +374,7 @@ h3 {
 .division-section .slide {
   transition: 300ms ease;
   padding-inline: 1.5em;
+  width: 100%;
 }
 
 .overview-sub-section .subject-list {
@@ -381,7 +382,7 @@ h3 {
   justify-content: flex-start;
   flex-wrap: wrap;
 }
-.overview-sub-section .subject-list .subject {
+.overview-sub-section .subject {
   text-align: center;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -389,10 +390,12 @@ h3 {
   font-size: 1.3rem;
   font-weight: bolder;
   background-color: var(--section-shadow);
-  margin-right: 1em;
   margin-top: 1em;
   padding: 0.5em;
   border-radius: 10px;
+}
+.overview-sub-section .subject + .subject {
+  margin-left: 1em;
 }
 
 .senior-sub-section {
@@ -400,7 +403,7 @@ h3 {
 }
 .senior-sub-section .profile-box {
   background-color: var(--section-shadow);
-  width: clamp(230px, 94%, 400px);
+  width: clamp(230px, 100%, 400px);
   margin-top: 2em;
   text-align: center;
   padding: 1em;
@@ -414,22 +417,22 @@ h3 {
 }
 .senior-sub-section .name {
   text-transform: none;
-  color: var(--section-desc-color);
+  color: var(--text-color-in-light-bg);
   margin-top: 1em;
   font-weight: 600;
-  width: 95%;
+  margin-inline: auto;
 }
 
 .project-sub-section {
   margin-top: 3em;
 }
 .project-sub-section .grid-container {
-  margin-top: 1em;
+  margin-top: 2.5em;
 }
-.project-sub-section .grid-container .grid-item-span-col-2 {
+.project-sub-section .grid-container .grid-span-col-2 {
   grid-column: span 2;
 }
-.project-sub-section .grid-container .grid-item-span-row-2 {
+.project-sub-section .grid-container .grid-span-row-2 {
   grid-column-start: 2;
   grid-row: 1/span 2;
 }
@@ -446,7 +449,7 @@ h3 {
   width: -moz-fit-content;
   width: fit-content;
   letter-spacing: 1px;
-  font-size: clamp(1.3rem, 3vw, 1.7rem);
+  font-size: clamp(1.3rem, 3.5vw, 1.7rem);
 }
 
 .project-item {
@@ -480,8 +483,8 @@ h3 {
   font-size: clamp(1rem, 4vw, 1.5rem);
   position: absolute;
   text-decoration: none;
-  background-color: var(--card-button-background);
-  color: var(--text-color-in-dark-bg);
+  background-color: var(--link-background);
+  color: var(--link-color);
   padding: 0.3em 0.7em;
   border-radius: 5px;
   font-weight: 600;
@@ -490,6 +493,59 @@ h3 {
   bottom: 0;
 }
 
+@media (min-width: 600px) {
+  .sub-section {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .division-section .title,
+.division-section .profile-box,
+.division-section .paragraph {
+    margin-inline: auto;
+    text-align: center;
+  }
+  .division-section .subject-list {
+    justify-content: center;
+  }
+  .division-section .slide {
+    display: flex;
+    justify-content: center;
+    row-gap: 3em;
+    flex-wrap: wrap;
+  }
+  .division-section .project-sub-section {
+    width: 100%;
+  }
+  .division-section .project-sub-section .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+
+  .project-item {
+    margin: 0;
+  }
+
+  .project-text-content .name,
+.project-text-content .detail-button {
+    font-size: clamp(0.7rem, 3vw, 1.2rem);
+  }
+  .project-text-content .name {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  .project-name {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+  }
+}
+@media (min-width: 768px) {
+  .sub-section {
+    width: 50%;
+  }
+}
 .registration-gate-section {
   height: auto;
   background-color: var(--background-color-accent);
@@ -546,15 +602,15 @@ h3 {
   height: auto;
   padding-block: 2em;
 }
-.contact-socmed .form-container {
+.contact-socmed .form {
   margin-block: 1em;
 }
-.contact-socmed .form-container .form-data {
+.contact-socmed .form-data {
   position: relative;
   max-width: 500px;
 }
-.contact-socmed .form-container .form-data input,
-.contact-socmed .form-container .form-data textarea {
+.contact-socmed input,
+.contact-socmed textarea {
   width: 60%;
   margin-block: 0.6em;
   resize: none;
@@ -566,14 +622,14 @@ h3 {
   transition: 200ms ease;
   font-family: inherit;
 }
-.contact-socmed .form-container .form-data input:focus,
-.contact-socmed .form-container .form-data textarea:focus {
+.contact-socmed input:focus,
+.contact-socmed textarea:focus {
   width: 70%;
   outline: 1px solid var(--link-background);
   border: 1px solid var(--link-background);
   transition: 200ms ease;
 }
-.contact-socmed .form-container .form-data label {
+.contact-socmed label {
   position: absolute;
   transform: translateY(90%);
   left: 5px;
@@ -585,32 +641,33 @@ h3 {
   color: var(--section-desc-color);
   border-radius: 50px;
 }
-.contact-socmed .form-container .form-data input:not(:-moz-placeholder-shown):not(:focus) ~ label, .contact-socmed .form-container .form-data textarea:not(:-moz-placeholder-shown):not(:focus) ~ label {
+.contact-socmed input:not(:-moz-placeholder-shown):not(:focus) ~ label, .contact-socmed textarea:not(:-moz-placeholder-shown):not(:focus) ~ label {
   -moz-transition: 200ms ease;
   transition: 200ms ease;
   font-size: clamp(0.7rem, 3vw, 1.2rem);
   transform: translateY(20%);
 }
-.contact-socmed .form-container .form-data input:not(:-ms-input-placeholder):not(:focus) ~ label, .contact-socmed .form-container .form-data textarea:not(:-ms-input-placeholder):not(:focus) ~ label {
+.contact-socmed input:not(:-ms-input-placeholder):not(:focus) ~ label, .contact-socmed textarea:not(:-ms-input-placeholder):not(:focus) ~ label {
   -ms-transition: 200ms ease;
   transition: 200ms ease;
   font-size: clamp(0.7rem, 3vw, 1.2rem);
   transform: translateY(20%);
 }
-.contact-socmed .form-container .form-data input:focus ~ label,
-.contact-socmed .form-container .form-data input:not(:placeholder-shown):not(:focus) ~ label,
-.contact-socmed .form-container .form-data textarea:not(:placeholder-shown):not(:focus) ~ label,
-.contact-socmed .form-container .form-data textarea:focus ~ label {
+.contact-socmed input:focus ~ label,
+.contact-socmed input:not(:placeholder-shown):not(:focus) ~ label,
+.contact-socmed textarea:not(:placeholder-shown):not(:focus) ~ label,
+.contact-socmed textarea:focus ~ label {
   transition: 200ms ease;
   font-size: clamp(0.7rem, 3vw, 1.2rem);
   transform: translateY(20%);
 }
-.contact-socmed .socmed .socmed-container {
+.contact-socmed .socmed-list {
+  display: flex;
   margin-block: 1em;
 }
-.contact-socmed .socmed .socmed-container .socmed-link {
+.contact-socmed .socmed-link {
   margin-right: 1em;
 }
-.contact-socmed .socmed .socmed-container .socmed-link img {
+.contact-socmed .socmed-link img {
   width: 50px;
 }/*# sourceMappingURL=main.css.map */
