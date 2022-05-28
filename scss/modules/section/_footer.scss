@@ -1,9 +1,12 @@
 @use '../root/general';
 @use '../root/font-size' as fs;
 
-.contact-socmed {
+.footer-section {
+  background-color: var(--background-color);
   height: auto;
   padding-block: 2em;
+  position: relative;
+  z-index: 1;
 
   .form {
     margin-block: 1em;
@@ -67,6 +70,21 @@
     margin-right: 1em;
     img {
       width: 50px;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .footer-section {
+    .container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .form-sub-section {
+      min-width: 370px;
+      flex-grow: 1;
+      flex-shrink: 0;
     }
   }
 }

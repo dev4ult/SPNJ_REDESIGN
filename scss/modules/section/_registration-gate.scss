@@ -3,7 +3,6 @@
 
 .registration-gate-section {
   height: auto;
-  background-color: var(--background-color-accent);
   position: relative;
   z-index: -2;
 
@@ -45,13 +44,21 @@
   width: 100%;
   height: 100%;
   justify-content: center;
+}
 
+.division-mascot:first-child,
+.division-mascot:last-child {
+  display: none;
+}
+
+.division-mascot {
+  width: clamp(250px, 50vw, 350px);
+}
+
+@media (min-width: 600px) {
   .division-mascot:first-child,
   .division-mascot:last-child {
-    display: none;
-  }
-
-  .division-mascot {
-    width: clamp(250px, 50vw, 350px);
+    width: clamp(100px, 20vw, 200px);
+    display: block;
   }
 }

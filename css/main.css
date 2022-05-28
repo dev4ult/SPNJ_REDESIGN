@@ -25,7 +25,7 @@
   position: fixed;
   right: 2vw;
   top: 10px;
-  padding: 0.3em 0.7em;
+  padding: 0.45em 0.7em;
   border-radius: 100px;
   background-color: var(--background-color);
   z-index: 3;
@@ -46,17 +46,17 @@
   display: flex;
   list-style: none;
   background-color: var(--link-background);
-  padding: 0.3em 0.5em;
+  padding: 0.3em 0.65em;
   border-radius: 50px;
 }
 
 .nav-link {
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 0.7rem;
   font-weight: bold;
   align-self: center;
   color: var(--link-color);
+  font-size: clamp(0.7rem, 3vw, 1.2rem);
 }
 
 .nav-theme,
@@ -69,9 +69,15 @@
 .nav-toggle {
   margin-inline: 0.4em;
 }
+.nav-toggle img {
+  width: clamp(9px, 2vw, 12px);
+}
 
 .nav-theme {
-  margin-left: 0.5em;
+  margin-left: 0.55em;
+}
+.nav-theme img {
+  width: clamp(25px, 3vw, 30px);
 }
 
 *,
@@ -322,19 +328,23 @@ h3 {
 .division-navigation {
   position: -webkit-sticky;
   position: sticky;
-  top: 16px;
+  top: 15px;
   display: flex;
   align-items: center;
-  margin-block: 1.5em;
+  margin-bottom: 1.5em;
   margin-left: 4vw;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   border-radius: 50px;
   background-color: var(--link-color);
-  padding-block: 0.2em;
+  padding-block: 0.45em;
   z-index: 2;
   transition: 200ms ease;
+}
+.division-navigation .arrow-nav {
+  width: clamp(9px, 2vw, 12px);
+  height: auto;
 }
 .division-navigation .arrow-back {
   display: none;
@@ -361,7 +371,9 @@ h3 {
 }
 
 .division-section {
-  padding-block: 1em;
+  padding-block: 2em;
+  background-color: var(--background-color-accent);
+  position: relative;
 }
 .division-section .container {
   overflow-x: hidden;
@@ -389,7 +401,8 @@ h3 {
   width: fit-content;
   font-size: 1.3rem;
   font-weight: bolder;
-  background-color: var(--section-shadow);
+  background-color: var(--hero-title-background);
+  color: var(--title-color);
   margin-top: 1em;
   padding: 0.5em;
   border-radius: 10px;
@@ -402,7 +415,7 @@ h3 {
   margin-top: 3em;
 }
 .senior-sub-section .profile-box {
-  background-color: var(--section-shadow);
+  background-color: var(--hero-title-background-before);
   width: clamp(230px, 100%, 400px);
   margin-top: 2em;
   text-align: center;
@@ -413,14 +426,18 @@ h3 {
   width: 200px;
   height: 200px;
   border-radius: 50%;
+  border: 10px solid var(--card-name-background);
   margin-bottom: 1em;
 }
 .senior-sub-section .name {
   text-transform: none;
-  color: var(--text-color-in-light-bg);
-  margin-top: 1em;
+  background-color: transparent;
   font-weight: 600;
   margin-inline: auto;
+}
+.senior-sub-section .name,
+.senior-sub-section .paragraph {
+  color: var(--card-background);
 }
 
 .project-sub-section {
@@ -458,6 +475,7 @@ h3 {
   display: flex;
   overflow: hidden;
   margin-top: 1em;
+  border-radius: 15px;
 }
 
 .project-item:last-child {
@@ -494,11 +512,23 @@ h3 {
 }
 
 @media (min-width: 600px) {
-  .sub-section {
-    width: 100%;
-    margin-top: 0;
+  .division-navigation {
+    margin-inline: auto;
   }
 
+  .sub-section {
+    width: 85%;
+    max-width: 450px;
+    margin-inline: auto;
+    margin: 0;
+  }
+
+  .division-section .slide {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 3em;
+  }
   .division-section .title,
 .division-section .profile-box,
 .division-section .paragraph {
@@ -508,16 +538,11 @@ h3 {
   .division-section .subject-list {
     justify-content: center;
   }
-  .division-section .slide {
-    display: flex;
-    justify-content: center;
-    row-gap: 3em;
-    flex-wrap: wrap;
-  }
   .division-section .project-sub-section {
     width: 100%;
+    max-width: 900px;
   }
-  .division-section .project-sub-section .grid-container {
+  .division-section .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 6px;
@@ -548,7 +573,6 @@ h3 {
 }
 .registration-gate-section {
   height: auto;
-  background-color: var(--background-color-accent);
   position: relative;
   z-index: -2;
 }
@@ -590,27 +614,39 @@ h3 {
   height: 100%;
   justify-content: center;
 }
-.mascot-list .division-mascot:first-child,
-.mascot-list .division-mascot:last-child {
+
+.division-mascot:first-child,
+.division-mascot:last-child {
   display: none;
 }
-.mascot-list .division-mascot {
+
+.division-mascot {
   width: clamp(250px, 50vw, 350px);
 }
 
-.contact-socmed {
+@media (min-width: 600px) {
+  .division-mascot:first-child,
+.division-mascot:last-child {
+    width: clamp(100px, 20vw, 200px);
+    display: block;
+  }
+}
+.footer-section {
+  background-color: var(--background-color);
   height: auto;
   padding-block: 2em;
+  position: relative;
+  z-index: 1;
 }
-.contact-socmed .form {
+.footer-section .form {
   margin-block: 1em;
 }
-.contact-socmed .form-data {
+.footer-section .form-data {
   position: relative;
   max-width: 500px;
 }
-.contact-socmed input,
-.contact-socmed textarea {
+.footer-section input,
+.footer-section textarea {
   width: 60%;
   margin-block: 0.6em;
   resize: none;
@@ -622,14 +658,14 @@ h3 {
   transition: 200ms ease;
   font-family: inherit;
 }
-.contact-socmed input:focus,
-.contact-socmed textarea:focus {
+.footer-section input:focus,
+.footer-section textarea:focus {
   width: 70%;
   outline: 1px solid var(--link-background);
   border: 1px solid var(--link-background);
   transition: 200ms ease;
 }
-.contact-socmed label {
+.footer-section label {
   position: absolute;
   transform: translateY(90%);
   left: 5px;
@@ -641,33 +677,45 @@ h3 {
   color: var(--section-desc-color);
   border-radius: 50px;
 }
-.contact-socmed input:not(:-moz-placeholder-shown):not(:focus) ~ label, .contact-socmed textarea:not(:-moz-placeholder-shown):not(:focus) ~ label {
+.footer-section input:not(:-moz-placeholder-shown):not(:focus) ~ label, .footer-section textarea:not(:-moz-placeholder-shown):not(:focus) ~ label {
   -moz-transition: 200ms ease;
   transition: 200ms ease;
   font-size: clamp(0.7rem, 3vw, 1.2rem);
   transform: translateY(20%);
 }
-.contact-socmed input:not(:-ms-input-placeholder):not(:focus) ~ label, .contact-socmed textarea:not(:-ms-input-placeholder):not(:focus) ~ label {
+.footer-section input:not(:-ms-input-placeholder):not(:focus) ~ label, .footer-section textarea:not(:-ms-input-placeholder):not(:focus) ~ label {
   -ms-transition: 200ms ease;
   transition: 200ms ease;
   font-size: clamp(0.7rem, 3vw, 1.2rem);
   transform: translateY(20%);
 }
-.contact-socmed input:focus ~ label,
-.contact-socmed input:not(:placeholder-shown):not(:focus) ~ label,
-.contact-socmed textarea:not(:placeholder-shown):not(:focus) ~ label,
-.contact-socmed textarea:focus ~ label {
+.footer-section input:focus ~ label,
+.footer-section input:not(:placeholder-shown):not(:focus) ~ label,
+.footer-section textarea:not(:placeholder-shown):not(:focus) ~ label,
+.footer-section textarea:focus ~ label {
   transition: 200ms ease;
   font-size: clamp(0.7rem, 3vw, 1.2rem);
   transform: translateY(20%);
 }
-.contact-socmed .socmed-list {
+.footer-section .socmed-list {
   display: flex;
   margin-block: 1em;
 }
-.contact-socmed .socmed-link {
+.footer-section .socmed-link {
   margin-right: 1em;
 }
-.contact-socmed .socmed-link img {
+.footer-section .socmed-link img {
   width: 50px;
+}
+
+@media (min-width: 600px) {
+  .footer-section .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer-section .form-sub-section {
+    min-width: 370px;
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
 }/*# sourceMappingURL=main.css.map */

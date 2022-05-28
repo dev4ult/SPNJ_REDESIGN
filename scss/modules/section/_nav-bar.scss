@@ -1,10 +1,12 @@
+@use '../root/font-size' as fs;
+
 .nav {
   display: flex;
   align-items: center;
   position: fixed;
   right: 2vw;
   top: 10px;
-  padding: 0.3em 0.7em;
+  padding: 0.45em 0.7em;
   border-radius: 100px;
   background-color: var(--background-color);
   z-index: 3;
@@ -25,17 +27,17 @@
   display: flex;
   list-style: none;
   background-color: var(--link-background);
-  padding: 0.3em 0.5em;
+  padding: 0.3em 0.65em;
   border-radius: 50px;
 }
 
 .nav-link {
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 0.7rem;
   font-weight: bold;
   align-self: center;
   color: var(--link-color);
+  font-size: fs.$extra-small;
 }
 
 .nav-theme,
@@ -47,8 +49,16 @@
 
 .nav-toggle {
   margin-inline: 0.4em;
+
+  img {
+    width: clamp(9px, 2vw, 12px);
+  }
 }
 
 .nav-theme {
-  margin-left: 0.5em;
+  margin-left: 0.55em;
+
+  img {
+    width: clamp(25px, 3vw, 30px);
+  }
 }

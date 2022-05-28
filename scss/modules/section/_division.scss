@@ -3,17 +3,22 @@
 
 .division-navigation {
   position: sticky;
-  top: 16px;
+  top: 15px;
   display: flex;
   align-items: center;
-  margin-block: 1.5em;
+  margin-bottom: 1.5em;
   margin-left: 4vw;
   width: fit-content;
   border-radius: 50px;
   background-color: var(--link-color);
-  padding-block: 0.2em;
+  padding-block: 0.45em;
   z-index: 2;
   transition: 200ms ease;
+
+  .arrow-nav {
+    width: clamp(9px, 2vw, 12px);
+    height: auto;
+  }
 
   .arrow-back {
     display: none;
@@ -45,7 +50,9 @@
 }
 
 .division-section {
-  padding-block: 1em;
+  padding-block: 2em;
+  background-color: var(--background-color-accent);
+  position: relative;
 
   .container {
     overflow-x: hidden;
@@ -76,7 +83,8 @@
     width: fit-content;
     font-size: 1.3rem;
     font-weight: bolder;
-    background-color: var(--section-shadow);
+    background-color: var(--hero-title-background);
+    color: var(--title-color);
     margin-top: 1em;
     padding: 0.5em;
     border-radius: 10px;
@@ -91,7 +99,7 @@
   margin-top: 3em;
 
   .profile-box {
-    background-color: var(--section-shadow);
+    background-color: var(--hero-title-background-before);
     width: clamp(230px, 100%, 400px);
     margin-top: 2em;
     text-align: center;
@@ -103,17 +111,24 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
+    border: 10px solid var(--card-name-background);
     margin-bottom: 1em;
   }
 
   .name {
     text-transform: none;
-    color: var(--text-color-in-light-bg);
-    margin-top: 1em;
+    background-color: transparent;
     font-weight: 600;
     margin-inline: auto;
   }
+
+  .name,
+  .paragraph {
+    color: var(--card-background);
+  }
 }
+
+// PROJECT SECTION
 
 .project-sub-section {
   margin-top: 3em;
@@ -150,6 +165,7 @@
   display: flex;
   overflow: hidden;
   margin-top: 1em;
+  border-radius: 15px;
 }
 
 .project-item:last-child {
@@ -188,12 +204,25 @@
 }
 
 @media (min-width: 600px) {
+  .division-navigation {
+    margin-inline: auto;
+  }
+
   .sub-section {
-    width: 100%;
-    margin-top: 0;
+    width: 85%;
+    max-width: 450px;
+    margin-inline: auto;
+    margin: 0;
   }
 
   .division-section {
+    .slide {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      row-gap: 3em;
+    }
+
     .title,
     .profile-box,
     .paragraph {
@@ -205,20 +234,15 @@
       justify-content: center;
     }
 
-    .slide {
-      display: flex;
-      justify-content: center;
-      row-gap: 3em;
-      flex-wrap: wrap;
-    }
-
     .project-sub-section {
       width: 100%;
-      .grid-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 6px;
-      }
+      max-width: 900px;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px;
     }
   }
 
