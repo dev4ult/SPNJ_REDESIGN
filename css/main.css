@@ -325,6 +325,45 @@ h3 {
   margin-right: 3vw;
 }
 
+@media (min-width: 600px) {
+  .organizer-section {
+    max-height: 100%;
+    height: auto;
+  }
+  .organizer-section .container {
+    display: block;
+    overflow: hidden;
+  }
+  .organizer-section .container .slide {
+    margin: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  .organizer-section .container .slide .card {
+    margin: 0;
+    max-width: 250px;
+    max-height: 330px;
+    padding: 0;
+  }
+  .organizer-section .container .slide .card .socmed-container {
+    right: 5%;
+  }
+  .organizer-section .container .slide .card .profile-picture {
+    width: 100%;
+  }
+  .organizer-section .name {
+    font-size: clamp(0.7rem, 3vw, 1.2rem);
+  }
+
+  .role {
+    font-size: clamp(0.7rem, 3vw, 1.2rem);
+  }
+
+  .socmed-link img {
+    width: clamp(20px, 7vw, 30px);
+  }
+}
 .division-navigation {
   position: -webkit-sticky;
   position: sticky;
@@ -374,6 +413,7 @@ h3 {
   padding-block: 2em;
   background-color: var(--background-color-accent);
   position: relative;
+  z-index: 1;
 }
 .division-section .container {
   overflow-x: hidden;
@@ -434,6 +474,7 @@ h3 {
   background-color: transparent;
   font-weight: 600;
   margin-inline: auto;
+  font-size: clamp(1.3rem, 3.5vw, 1.7rem);
 }
 .senior-sub-section .name,
 .senior-sub-section .paragraph {

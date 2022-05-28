@@ -53,6 +53,7 @@
   padding-block: 2em;
   background-color: var(--background-color-accent);
   position: relative;
+  z-index: 1;
 
   .container {
     overflow-x: hidden;
@@ -120,6 +121,7 @@
     background-color: transparent;
     font-weight: 600;
     margin-inline: auto;
+    font-size: fs.$medium;
   }
 
   .name,

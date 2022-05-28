@@ -99,3 +99,51 @@
     margin-right: 3vw;
   }
 }
+
+@media (min-width: 600px) {
+  .organizer-section {
+    max-height: 100%;
+    height: auto;
+
+    .container {
+      display: block;
+      overflow: hidden;
+
+      .slide {
+        margin: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+
+        .card {
+          margin: 0;
+          max-width: 250px;
+          max-height: 330px;
+          padding: 0;
+
+          .socmed-container {
+            right: 5%;
+          }
+
+          .profile-picture {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .name {
+      font-size: fs.$extra-small;
+    }
+  }
+
+  .role {
+    font-size: fs.$extra-small;
+  }
+
+  .socmed-link {
+    img {
+      width: clamp(20px, 7vw, 30px);
+    }
+  }
+}
