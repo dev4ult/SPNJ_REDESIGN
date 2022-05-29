@@ -62,3 +62,23 @@ questionTextarea.addEventListener('mouseenter', (_) => {
 questionTextarea.addEventListener('mouseleave', (_) => {
   questionTextarea.rows = 1;
 });
+
+const cards = document.querySelectorAll('.card');
+
+const doSomething = {
+  rootMargin: '0% -30% 0% -30%',
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      entry.target.className = 'card';
+      return;
+    }
+    entry.target.className = 'card scaleBigger';
+  });
+}, doSomething);
+
+cards.forEach((card) => {
+  observer.observe(card);
+});

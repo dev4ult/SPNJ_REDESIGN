@@ -22,6 +22,7 @@
     display: flex;
     position: relative;
     z-index: 0;
+    align-items: center;
   }
 
   .slide + .slide {
@@ -35,8 +36,8 @@
 
 .card {
   padding-inline: 0.2em;
-  width: 80vw;
-  height: 95vw;
+  width: 65vw;
+  height: 85vw;
   max-width: 378px;
   max-height: 473px;
   margin-inline: auto;
@@ -44,17 +45,17 @@
   align-items: center;
   position: relative;
   z-index: 1;
+  transition: 300ms ease;
 
   .socmed-container {
     display: flex;
     flex-direction: column;
     position: absolute;
-    right: 15%;
+    right: 5%;
     bottom: 10px;
   }
 
   .profile-picture {
-    width: 90%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
@@ -68,6 +69,11 @@
       margin-bottom: 0.2em;
     }
   }
+}
+
+.scaleBigger {
+  width: 75vw;
+  height: 95vw;
 }
 
 .name_and_role {

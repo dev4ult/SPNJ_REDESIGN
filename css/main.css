@@ -252,6 +252,7 @@ h3 {
   display: flex;
   position: relative;
   z-index: 0;
+  align-items: center;
 }
 .organizer-section .slide + .slide {
   margin-left: 4vw;
@@ -263,8 +264,8 @@ h3 {
 
 .card {
   padding-inline: 0.2em;
-  width: 80vw;
-  height: 95vw;
+  width: 65vw;
+  height: 85vw;
   max-width: 378px;
   max-height: 473px;
   margin-inline: auto;
@@ -272,16 +273,16 @@ h3 {
   align-items: center;
   position: relative;
   z-index: 1;
+  transition: 300ms ease;
 }
 .card .socmed-container {
   display: flex;
   flex-direction: column;
   position: absolute;
-  right: 15%;
+  right: 5%;
   bottom: 10px;
 }
 .card .profile-picture {
-  width: 90%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -292,6 +293,11 @@ h3 {
   width: clamp(30px, 7vw, 45px);
   margin-top: 0.7em;
   margin-bottom: 0.2em;
+}
+
+.scaleBigger {
+  width: 75vw;
+  height: 95vw;
 }
 
 .name_and_role {
